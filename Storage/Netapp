@@ -1,0 +1,932 @@
+login as: admin
+Keyboard-interactive authentication prompts from server:
+| Password:
+End of keyboard-interactive prompts from server
+
+This is your first recorded login.
+c1::>
+c1::>
+login as: admin
+Keyboard-interactive authentication prompts from server:
+| Password:
+End of keyboard-interactive prompts from server
+
+Last login time: 4/13/2021 11:54:39
+c1::> rows 0
+
+c1::> set diagnostic
+
+Warning: These diagnostic commands are for use by NetApp personnel only.
+Do you want to continue? {y|n}: y
+
+c1::*> security login unlock
+Usage:
+  [ -vserver <vserver name> ]  Vserver (default: c1)
+   [-username] <text>          Username
+
+c1::*> security login unlock -username diag
+
+c1::*> security login
+    banner                        create
+    delete                        domain-tunnel
+    expire-password               group-authentication
+    information                   lock
+    modify                        motd
+    password                      password-prepare-to-downgrade
+    publickey                     rest-role
+    role                          show
+    unlock                        whoami
+
+c1::*> security login password
+    password                      password-prepare-to-downgrade
+c1::*> security login password -username diag -
+    -vserver       -hash-function
+c1::*> security login password -username diag -
+    -vserver       -hash-function
+c1::*> security login password -username diag -vserver c1 -hash-function sha
+    sha256 sha512
+c1::*> security login password -username diag
+
+Enter a new password:
+Enter it again:
+
+c1::*> disk
+    disk           disk_fw_update
+
+c1::*> disk show
+                     Usable           Disk    Container   Container
+Disk                   Size Shelf Bay Type    Type        Name      Owner
+---------------- ---------- ----- --- ------- ----------- --------- --------
+NET-1.1                   -     -  16 ATA     unassigned  -         -
+NET-1.2                   -     -  17 ATA     unassigned  -         -
+NET-1.3                   -     -  18 ATA     unassigned  -         -
+NET-1.4                   -     -  19 ATA     unassigned  -         -
+NET-1.5                   -     -  20 ATA     unassigned  -         -
+NET-1.6                   -     -  21 ATA     unassigned  -         -
+NET-1.7                   -     -  22 ATA     unassigned  -         -
+NET-1.8              8.81GB     -  16 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.9              8.81GB     -  17 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.10                  -     -  24 ATA     unassigned  -         -
+NET-1.11                  -     -  25 ATA     unassigned  -         -
+NET-1.12             8.81GB     -  18 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.13             8.81GB     -  19 ATA     spare       Pool0     c1-01
+NET-1.14             8.81GB     -  20 ATA     spare       Pool0     c1-01
+NET-1.15             8.81GB     -  21 ATA     spare       Pool0     c1-01
+NET-1.16             8.81GB     -  22 ATA     spare       Pool0     c1-01
+NET-1.17             8.81GB     -  24 ATA     spare       Pool0     c1-01
+NET-1.18             8.81GB     -  25 ATA     spare       Pool0     c1-01
+NET-1.19             8.81GB     -  26 ATA     spare       Pool0     c1-01
+NET-1.20             8.81GB     -  27 ATA     spare       Pool0     c1-01
+NET-1.21             8.81GB     -  28 ATA     spare       Pool0     c1-01
+NET-1.22             8.81GB     -  29 ATA     spare       Pool0     c1-01
+NET-1.23             8.81GB     -  32 ATA     spare       Pool0     c1-01
+NET-1.24                  -     -  26 ATA     unassigned  -         -
+NET-1.25                  -     -  27 ATA     unassigned  -         -
+NET-1.26                  -     -  28 ATA     unassigned  -         -
+NET-1.27                  -     -  29 ATA     unassigned  -         -
+NET-1.28                  -     -  32 ATA     unassigned  -         -
+NET-1.29                  -     -  16 ATA     unassigned  -         -
+NET-1.30                  -     -  17 ATA     unassigned  -         -
+NET-1.31                  -     -  18 ATA     unassigned  -         -
+NET-1.32                  -     -  19 ATA     unassigned  -         -
+NET-1.33                  -     -  20 ATA     unassigned  -         -
+NET-1.34                  -     -  21 ATA     unassigned  -         -
+NET-1.35                  -     -  22 ATA     unassigned  -         -
+NET-1.36                  -     -  24 ATA     unassigned  -         -
+NET-1.37                  -     -  25 ATA     unassigned  -         -
+NET-1.38                  -     -  26 ATA     unassigned  -         -
+NET-1.39                  -     -  27 ATA     unassigned  -         -
+NET-1.40                  -     -  28 ATA     unassigned  -         -
+NET-1.41                  -     -  29 ATA     unassigned  -         -
+NET-1.42                  -     -  32 ATA     unassigned  -         -
+c1-01:v7.16               -     -  16 FCAL    unassigned  -         -
+c1-01:v7.17               -     -  17 FCAL    unassigned  -         -
+c1-01:v7.18               -     -  18 FCAL    unassigned  -         -
+c1-01:v7.19               -     -  19 FCAL    unassigned  -         -
+c1-01:v7.20               -     -  20 FCAL    unassigned  -         -
+c1-01:v7.21               -     -  21 FCAL    unassigned  -         -
+c1-01:v7.22               -     -  22 FCAL    unassigned  -         -
+c1-01:v7.24               -     -  24 FCAL    unassigned  -         -
+c1-01:v7.25               -     -  25 FCAL    unassigned  -         -
+c1-01:v7.26               -     -  26 FCAL    unassigned  -         -
+c1-01:v7.27               -     -  27 FCAL    unassigned  -         -
+c1-01:v7.28               -     -  28 FCAL    unassigned  -         -
+c1-01:v7.29               -     -  29 FCAL    unassigned  -         -
+c1-01:v7.32               -     -  32 FCAL    unassigned  -         -
+56 entries were displayed.
+
+c1::*> disk show -
+    -broken                     -disk-states
+    -errors                     -foreign
+    -instance                   -longop
+    -maintenance                -ownership
+    -partition-ownership        -physical
+    -physical-location          -port
+    -primary-paths              -raid
+    -raid-info-for-aggregate    -spare
+    -ssd-wear                   -stat
+    -virtual-machine-disk-info  -vmdisk-backing-info
+    -disk                       -owner
+    -owner-id                   -is-foreign
+    -uid                        -aggregate
+    -array-name                 -average-latency
+    -bay                        -bps
+    -capacity-sectors           -carrier-id
+    -checksum-compatibility     -class
+    -container-type             -container-name
+    -copy-destination           -copy-percent
+    -data-owner                 -data1-owner
+    -data2-owner                -data-home
+    -data1-home                 -data2-home
+    -data-owner-id              -data1-owner-id
+    -data2-owner-id             -data-home-id
+    -data1-home-id              -data2-home-id
+    -disk-io-kbps-total         -disk-iops-total
+    -diskpathnames              -effective-rpm
+    -dr-home                    -dr-home-id
+    -drawer                     -error-type
+    -firmware-revision          -grown-defect-list-count
+    -home                       -home-id
+    -host-adapter               -hw-minimum-os
+    -import-in-progress         -initiator
+    -initiator-iops             -initiator-io-kbps
+    -initiator-lun-in-use-count -initiator-side-switch-port
+    -is-dynamically-qualified   -is-multidisk-carrier
+    -is-local-attach            -location
+    -location-id                -lun
+    -lun-iops                   -lun-io-kbps
+    -lun-path-use-state         -media-scrub-count
+    -media-scrub-last-done      -model
+    -nodelist                   -outage-reason
+    -path-error-count           -path-iops
+    -path-io-kbps               -path-link-errors
+    -path-lun-in-use-count      -path-quality
+    -physical-size-mb           -physical-size
+    -physical-size-512b         -plex
+    -pool                       -port-speed
+    -position                   -power-on-hours
+    -prefailed                  -preferred-target-port
+    -primary-port               -raid-group
+    -reconstruction-percent     -replacing
+    -reservation-key            -reservation-type
+    -reserver-id                -root-owner
+    -root-owner-id              -root-home
+    -root-home-id               -rpm
+    -secondary-name             -secondary-port
+    -sectors-read               -sectors-written
+    -serial-number              -storage-pool
+    -shelf                      -shelf-uid
+    -shm-time-interval          -slot
+    -stack-id                   -target-iops
+    -target-io-kbps             -target-lun-in-use-count
+    -target-port-access-state   -target-side-switch-port
+    -target-wwpn                -tpgn
+    -type                       -usable-size-mb
+    -usable-size                -vendor
+    -vmdisk-device-id           -zeroed
+    -zeroing-percent            -carrier-serialno
+    -vmdisk-target-address      -path-count
+    -fields
+
+c1::*> disk show -fields
+    disk                       owner
+    owner-id                   is-foreign
+    uid                        aggregate
+    array-name                 average-latency
+    bay                        bps
+    capacity-sectors           carrier-id
+    checksum-compatibility     class
+    container-type             container-name
+    copy-destination           copy-percent
+    data-owner                 data1-owner
+    data2-owner                data-home
+    data1-home                 data2-home
+    data-owner-id              data1-owner-id
+    data2-owner-id             data-home-id
+    data1-home-id              data2-home-id
+    disk-io-kbps-total         disk-iops-total
+    diskpathnames              effective-rpm
+    dr-home                    dr-home-id
+    drawer                     error-type
+    firmware-revision          grown-defect-list-count
+    home                       home-id
+    host-adapter               hw-minimum-os
+    import-in-progress         initiator
+    initiator-iops             initiator-io-kbps
+    initiator-lun-in-use-count initiator-side-switch-port
+    is-dynamically-qualified   is-multidisk-carrier
+    is-local-attach            location
+    location-id                lun
+    lun-iops                   lun-io-kbps
+    lun-path-use-state         media-scrub-count
+    media-scrub-last-done      model
+    nodelist                   outage-reason
+    path-error-count           path-iops
+    path-io-kbps               path-link-errors
+    path-lun-in-use-count      path-quality
+    physical-size-mb           physical-size
+    physical-size-512b         plex
+    pool                       port-speed
+    position                   power-on-hours
+    prefailed                  preferred-target-port
+    primary-port               raid-group
+    reconstruction-percent     replacing
+    reservation-key            reservation-type
+    reserver-id                root-owner
+    root-owner-id              root-home
+    root-home-id               rpm
+    secondary-name             secondary-port
+    sectors-read               sectors-written
+    serial-number              storage-pool
+    shelf                      shelf-uid
+    shm-time-interval          slot
+    stack-id                   target-iops
+    target-io-kbps             target-lun-in-use-count
+    target-port-access-state   target-side-switch-port
+    target-wwpn                tpgn
+    type                       usable-size-mb
+    usable-size                vendor
+    vmdisk-device-id           zeroed
+    zeroing-percent            carrier-serialno
+    vmdisk-target-address      path-count
+
+c1::*> disk show -fields type, po
+    pool           port-speed     position       power-on-hours
+
+c1::*> disk show -fields type, position, owner
+    owner    owner-id
+c1::*> disk show -fields type, position, owner
+disk        owner position type
+----------- ----- -------- ----
+NET-1.1     -     present  ATA
+NET-1.2     -     present  ATA
+NET-1.3     -     present  ATA
+NET-1.4     -     present  ATA
+NET-1.5     -     present  ATA
+NET-1.6     -     present  ATA
+NET-1.7     -     present  ATA
+NET-1.8     c1-01 dparity  ATA
+NET-1.9     c1-01 parity   ATA
+NET-1.10    -     present  ATA
+NET-1.11    -     present  ATA
+NET-1.12    c1-01 data     ATA
+NET-1.13    c1-01 present  ATA
+NET-1.14    c1-01 present  ATA
+NET-1.15    c1-01 present  ATA
+NET-1.16    c1-01 present  ATA
+NET-1.17    c1-01 present  ATA
+NET-1.18    c1-01 present  ATA
+NET-1.19    c1-01 present  ATA
+NET-1.20    c1-01 present  ATA
+NET-1.21    c1-01 present  ATA
+NET-1.22    c1-01 present  ATA
+NET-1.23    c1-01 present  ATA
+NET-1.24    -     present  ATA
+NET-1.25    -     present  ATA
+NET-1.26    -     present  ATA
+NET-1.27    -     present  ATA
+NET-1.28    -     present  ATA
+NET-1.29    -     present  ATA
+NET-1.30    -     present  ATA
+NET-1.31    -     present  ATA
+NET-1.32    -     present  ATA
+NET-1.33    -     present  ATA
+NET-1.34    -     present  ATA
+NET-1.35    -     present  ATA
+NET-1.36    -     present  ATA
+NET-1.37    -     present  ATA
+NET-1.38    -     present  ATA
+NET-1.39    -     present  ATA
+NET-1.40    -     present  ATA
+NET-1.41    -     present  ATA
+NET-1.42    -     present  ATA
+c1-01:v7.16 -     present  FCAL
+c1-01:v7.17 -     present  FCAL
+c1-01:v7.18 -     present  FCAL
+c1-01:v7.19 -     present  FCAL
+c1-01:v7.20 -     present  FCAL
+c1-01:v7.21 -     present  FCAL
+c1-01:v7.22 -     present  FCAL
+c1-01:v7.24 -     present  FCAL
+c1-01:v7.25 -     present  FCAL
+c1-01:v7.26 -     present  FCAL
+c1-01:v7.27 -     present  FCAL
+c1-01:v7.28 -     present  FCAL
+c1-01:v7.29 -     present  FCAL
+c1-01:v7.32 -     present  FCAL
+56 entries were displayed.
+
+c1::*> agre
+
+Error: "agre" is not a recognized command
+c1::*> agrega
+
+Error: "agrega" is not a recognized command
+c1::*> aggregate
+    aggregate  aggregates
+c1::*> aggregate modify -aggregate aggr0_c1_01 -raid
+    -raid-checksum-verify -raid-lost-write      -raidtype
+c1::*> aggregate modify -aggregate aggr0_c1_01 -raidtype raid
+    raid_tec raid_dp  raid4
+c1::*> aggregate modify -aggregate aggr0_c1_01 -raidtype raid4
+  (storage aggregate modify)
+
+c1::*> disk
+    disk           disk_fw_update
+
+c1::*> disk show
+                     Usable           Disk    Container   Container
+Disk                   Size Shelf Bay Type    Type        Name      Owner
+---------------- ---------- ----- --- ------- ----------- --------- --------
+NET-1.1                   -     -  16 ATA     unassigned  -         -
+NET-1.2                   -     -  17 ATA     unassigned  -         -
+NET-1.3                   -     -  18 ATA     unassigned  -         -
+NET-1.4                   -     -  19 ATA     unassigned  -         -
+NET-1.5                   -     -  20 ATA     unassigned  -         -
+NET-1.6                   -     -  21 ATA     unassigned  -         -
+NET-1.7                   -     -  22 ATA     unassigned  -         -
+NET-1.8              8.81GB     -  16 ATA     spare       Pool0     c1-01
+NET-1.9              8.81GB     -  17 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.10                  -     -  24 ATA     unassigned  -         -
+NET-1.11                  -     -  25 ATA     unassigned  -         -
+NET-1.12             8.81GB     -  18 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.13             8.81GB     -  19 ATA     spare       Pool0     c1-01
+NET-1.14             8.81GB     -  20 ATA     spare       Pool0     c1-01
+NET-1.15             8.81GB     -  21 ATA     spare       Pool0     c1-01
+NET-1.16             8.81GB     -  22 ATA     spare       Pool0     c1-01
+NET-1.17             8.81GB     -  24 ATA     spare       Pool0     c1-01
+NET-1.18             8.81GB     -  25 ATA     spare       Pool0     c1-01
+NET-1.19             8.81GB     -  26 ATA     spare       Pool0     c1-01
+NET-1.20             8.81GB     -  27 ATA     spare       Pool0     c1-01
+NET-1.21             8.81GB     -  28 ATA     spare       Pool0     c1-01
+NET-1.22             8.81GB     -  29 ATA     spare       Pool0     c1-01
+NET-1.23             8.81GB     -  32 ATA     spare       Pool0     c1-01
+NET-1.24                  -     -  26 ATA     unassigned  -         -
+NET-1.25                  -     -  27 ATA     unassigned  -         -
+NET-1.26                  -     -  28 ATA     unassigned  -         -
+NET-1.27                  -     -  29 ATA     unassigned  -         -
+NET-1.28                  -     -  32 ATA     unassigned  -         -
+NET-1.29                  -     -  16 ATA     unassigned  -         -
+NET-1.30                  -     -  17 ATA     unassigned  -         -
+NET-1.31                  -     -  18 ATA     unassigned  -         -
+NET-1.32                  -     -  19 ATA     unassigned  -         -
+NET-1.33                  -     -  20 ATA     unassigned  -         -
+NET-1.34                  -     -  21 ATA     unassigned  -         -
+NET-1.35                  -     -  22 ATA     unassigned  -         -
+NET-1.36                  -     -  24 ATA     unassigned  -         -
+NET-1.37                  -     -  25 ATA     unassigned  -         -
+NET-1.38                  -     -  26 ATA     unassigned  -         -
+NET-1.39                  -     -  27 ATA     unassigned  -         -
+NET-1.40                  -     -  28 ATA     unassigned  -         -
+NET-1.41                  -     -  29 ATA     unassigned  -         -
+NET-1.42                  -     -  32 ATA     unassigned  -         -
+c1-01:v7.16               -     -  16 FCAL    unassigned  -         -
+c1-01:v7.17               -     -  17 FCAL    unassigned  -         -
+c1-01:v7.18               -     -  18 FCAL    unassigned  -         -
+c1-01:v7.19               -     -  19 FCAL    unassigned  -         -
+c1-01:v7.20               -     -  20 FCAL    unassigned  -         -
+c1-01:v7.21               -     -  21 FCAL    unassigned  -         -
+c1-01:v7.22               -     -  22 FCAL    unassigned  -         -
+c1-01:v7.24               -     -  24 FCAL    unassigned  -         -
+c1-01:v7.25               -     -  25 FCAL    unassigned  -         -
+c1-01:v7.26               -     -  26 FCAL    unassigned  -         -
+c1-01:v7.27               -     -  27 FCAL    unassigned  -         -
+c1-01:v7.28               -     -  28 FCAL    unassigned  -         -
+c1-01:v7.29               -     -  29 FCAL    unassigned  -         -
+c1-01:v7.32               -     -  32 FCAL    unassigned  -         -
+56 entries were displayed.
+
+c1::*> (Login timeout will occur in 60 seconds)
+
+c1::*>
+c1::*>
+c1::*> (Login timeout will occur in 50 seconds)
+
+c1::*>
+c1::*>
+    application     autobalance     cluster         diag
+    event           exit            history         job
+    logger          lun             man             metrocluster
+    network         nonshared-clus  protection-type qos
+    redo            rows            run             san
+    security        set             snaplock        snapmirror
+    spm             statistics      statistics-v1   storage
+    storage-service system          top             up
+    volume          vserver         vvol
+
+c1::*> agre
+
+Error: "agre" is not a recognized command
+c1::*> aggregate
+    aggregate  aggregates
+c1::*> aggregate create -aggregate
+  <aggregate name>            Aggregate
+c1::*> aggregate create -aggregate c1n1_data -diskcount
+  <integer>                   Number Of Disks
+c1::*> aggregate create -aggregate c1n1_data -
+    -chksumstyle
+    -diskcount
+    -diskrpm
+    -disksize
+    -disktype
+    -diskclass
+    -mirror
+    -pool
+    -disklist
+    -mirror-disklist
+    -partitionlist
+    -mirror-partitionlist
+    -ignore-pool-checks
+    -allow-mixed-rpm
+    -allow-same-carrier
+    -node
+    -maxraidsize
+    -raidtype
+    -simulate
+    -force-small-aggregate
+    -is-autobalance-eligible
+    -snaplock-type
+    -autobalance-unbalanced-threshold-percent
+    -autobalance-available-threshold-percent
+    -encrypt-with-aggr-key
+
+c1::*> aggregate create -aggregate c1n1_data -disk
+    -diskcount -diskrpm   -disksize  -disktype  -diskclass -disklist
+c1::*> aggregate create -aggregate c1n1_data -diskc
+    -diskcount -diskclass
+
+c1::*> aggregate create -aggregate c1n1_data -diskcount
+  <integer>                   Number Of Disks
+
+c1::*> aggregate create -aggregate c1n1_data -diskcount 39 -
+    -chksumstyle
+    -diskrpm
+    -disksize
+    -disktype
+    -diskclass
+    -mirror
+    -pool
+    -node
+    -maxraidsize
+    -raidtype
+    -simulate
+    -force-small-aggregate
+    -is-autobalance-eligible
+    -snaplock-type
+    -autobalance-unbalanced-threshold-percent
+    -autobalance-available-threshold-percent
+    -encrypt-with-aggr-key
+c1::*> aggregate create -aggregate c1n1_data -diskcount 39 -disk
+    -diskrpm   -disksize  -disktype  -diskclass
+c1::*> aggregate create -aggregate c1n1_data -diskcount 39 -disktype
+    ATA       BSAS      FCAL      FSAS      LUN       MSATA     SAS
+    SSD       VMDISK    SSD-NVM   SSD-CAP   VMLUN     VMLUN-SSD
+
+c1::*> aggregate create -aggregate c1n1_data -diskcount 39 -disktype
+  (storage aggregate create)
+
+Error: Missing value for -disktype.
+
+c1::*> aggregate create -aggregate c1n1_data -diskcount 39 -disktype ATA -
+    -chksumstyle
+    -diskrpm
+    -disksize
+    -mirror
+    -pool
+    -node
+    -maxraidsize
+    -raidtype
+    -simulate
+    -force-small-aggregate
+    -is-autobalance-eligible
+    -snaplock-type
+    -autobalance-unbalanced-threshold-percent
+    -autobalance-available-threshold-percent
+    -encrypt-with-aggr-key
+c1::*> aggregate create -aggregate c1n1_data -diskcount 39 -disktype ATA -raidtype raid
+    raid_tec raid_dp  raid4
+c1::*> aggregate create -aggregate c1n1_data -diskcount 39 -disktype ATA -raidtype raid4 -
+    -chksumstyle
+    -diskrpm
+    -disksize
+    -mirror
+    -pool
+    -node
+    -maxraidsize
+    -simulate
+    -force-small-aggregate
+    -is-autobalance-eligible
+    -snaplock-type
+    -autobalance-unbalanced-threshold-percent
+    -autobalance-available-threshold-percent
+    -encrypt-with-aggr-key
+c1::*> aggregate create -aggregate c1n1_data -diskcount 39 -disktype ATA -raidtype raid4 -maxraidsize
+  <integer>                   Max RAID Size
+
+c1::*> aggregate create -aggregate c1n1_data -diskcount 39 -disktype ATA -raidtype raid4 -maxraidsize 13 -
+    -chksumstyle
+    -diskrpm
+    -disksize
+    -mirror
+    -pool
+    -node
+    -simulate
+    -force-small-aggregate
+    -is-autobalance-eligible
+    -snaplock-type
+    -autobalance-unbalanced-threshold-percent
+    -autobalance-available-threshold-percent
+    -encrypt-with-aggr-key
+c1::*> aggregate create -aggregate c1n1_data -diskcount 39 -disktype ATA -raidtype raid4 -maxraidsize 13 -simulate true -
+    -chksumstyle
+    -diskrpm
+    -disksize
+    -mirror
+    -pool
+    -node
+    -force-small-aggregate
+    -is-autobalance-eligible
+    -snaplock-type
+    -autobalance-unbalanced-threshold-percent
+    -autobalance-available-threshold-percent
+    -encrypt-with-aggr-key
+c1::*> aggregate create -aggregate c1n1_data -diskcount 39 -disktype ATA -raidtype raid4 -maxraidsize 13 -simulate true
+  (storage aggregate create)
+
+Error: command failed: Aggregate creation would fail for aggregate "c1n1_data" on node "c1-01". Reason: 39 disks needed, but not enough matching disks are available. Note: RAID4 is not compatible with
+       shared disks unless the shared disks belong to a storage pool or an AFF setup.
+
+c1::*> disk show
+                     Usable           Disk    Container   Container
+Disk                   Size Shelf Bay Type    Type        Name      Owner
+---------------- ---------- ----- --- ------- ----------- --------- --------
+NET-1.1                   -     -  16 ATA     unassigned  -         -
+NET-1.2                   -     -  17 ATA     unassigned  -         -
+NET-1.3                   -     -  18 ATA     unassigned  -         -
+NET-1.4                   -     -  19 ATA     unassigned  -         -
+NET-1.5                   -     -  20 ATA     unassigned  -         -
+NET-1.6                   -     -  21 ATA     unassigned  -         -
+NET-1.7                   -     -  22 ATA     unassigned  -         -
+NET-1.8              8.81GB     -  16 ATA     spare       Pool0     c1-01
+NET-1.9              8.81GB     -  17 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.10                  -     -  24 ATA     unassigned  -         -
+NET-1.11                  -     -  25 ATA     unassigned  -         -
+NET-1.12             8.81GB     -  18 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.13             8.81GB     -  19 ATA     spare       Pool0     c1-01
+NET-1.14             8.81GB     -  20 ATA     spare       Pool0     c1-01
+NET-1.15             8.81GB     -  21 ATA     spare       Pool0     c1-01
+NET-1.16             8.81GB     -  22 ATA     spare       Pool0     c1-01
+NET-1.17             8.81GB     -  24 ATA     spare       Pool0     c1-01
+NET-1.18             8.81GB     -  25 ATA     spare       Pool0     c1-01
+NET-1.19             8.81GB     -  26 ATA     spare       Pool0     c1-01
+NET-1.20             8.81GB     -  27 ATA     spare       Pool0     c1-01
+NET-1.21             8.81GB     -  28 ATA     spare       Pool0     c1-01
+NET-1.22             8.81GB     -  29 ATA     spare       Pool0     c1-01
+NET-1.23             8.81GB     -  32 ATA     spare       Pool0     c1-01
+NET-1.24                  -     -  26 ATA     unassigned  -         -
+NET-1.25                  -     -  27 ATA     unassigned  -         -
+NET-1.26                  -     -  28 ATA     unassigned  -         -
+NET-1.27                  -     -  29 ATA     unassigned  -         -
+NET-1.28                  -     -  32 ATA     unassigned  -         -
+NET-1.29                  -     -  16 ATA     unassigned  -         -
+NET-1.30                  -     -  17 ATA     unassigned  -         -
+NET-1.31                  -     -  18 ATA     unassigned  -         -
+NET-1.32                  -     -  19 ATA     unassigned  -         -
+NET-1.33                  -     -  20 ATA     unassigned  -         -
+NET-1.34                  -     -  21 ATA     unassigned  -         -
+NET-1.35                  -     -  22 ATA     unassigned  -         -
+NET-1.36                  -     -  24 ATA     unassigned  -         -
+NET-1.37                  -     -  25 ATA     unassigned  -         -
+NET-1.38                  -     -  26 ATA     unassigned  -         -
+NET-1.39                  -     -  27 ATA     unassigned  -         -
+NET-1.40                  -     -  28 ATA     unassigned  -         -
+NET-1.41                  -     -  29 ATA     unassigned  -         -
+NET-1.42                  -     -  32 ATA     unassigned  -         -
+c1-01:v7.16               -     -  16 FCAL    unassigned  -         -
+c1-01:v7.17               -     -  17 FCAL    unassigned  -         -
+c1-01:v7.18               -     -  18 FCAL    unassigned  -         -
+c1-01:v7.19               -     -  19 FCAL    unassigned  -         -
+c1-01:v7.20               -     -  20 FCAL    unassigned  -         -
+c1-01:v7.21               -     -  21 FCAL    unassigned  -         -
+c1-01:v7.22               -     -  22 FCAL    unassigned  -         -
+c1-01:v7.24               -     -  24 FCAL    unassigned  -         -
+c1-01:v7.25               -     -  25 FCAL    unassigned  -         -
+c1-01:v7.26               -     -  26 FCAL    unassigned  -         -
+c1-01:v7.27               -     -  27 FCAL    unassigned  -         -
+c1-01:v7.28               -     -  28 FCAL    unassigned  -         -
+c1-01:v7.29               -     -  29 FCAL    unassigned  -         -
+c1-01:v7.32               -     -  32 FCAL    unassigned  -         -
+56 entries were displayed.
+
+c1::*> disk assign -disklist
+  <disk path name>            Disk list
+c1::*> disk assign -disklist
+  <disk path name>            Disk list
+
+c1::*> disk assign -disklist
+  <disk path name>            Disk list
+
+c1::*> disk assign -a
+    -all  -auto
+
+c1::*> disk assign -all
+
+Error: command failed: With -all input, nodename must be specified.
+
+c1::*> disk assign -all true -
+    -pool                -owner               -sysid
+    -copy-ownership-from -checksum            -force
+    -node                -root                -data
+    -data1               -data2
+c1::*> disk assign -all true -node c1-01 -
+    -pool                -owner               -sysid
+    -copy-ownership-from -checksum            -force
+    -root                -data                -data1
+    -data2
+c1::*> disk assign -all true -node c1-01
+
+c1::*> disk show
+                     Usable           Disk    Container   Container
+Disk                   Size Shelf Bay Type    Type        Name      Owner
+---------------- ---------- ----- --- ------- ----------- --------- --------
+NET-1.1              8.81GB     -  16 ATA     spare       Pool0     c1-01
+NET-1.2              8.81GB     -  17 ATA     spare       Pool0     c1-01
+NET-1.3              8.81GB     -  18 ATA     spare       Pool0     c1-01
+NET-1.4              8.81GB     -  19 ATA     spare       Pool0     c1-01
+NET-1.5              8.81GB     -  20 ATA     spare       Pool0     c1-01
+NET-1.6              8.81GB     -  21 ATA     spare       Pool0     c1-01
+NET-1.7              8.81GB     -  22 ATA     spare       Pool0     c1-01
+NET-1.8              8.81GB     -  16 ATA     spare       Pool0     c1-01
+NET-1.9              8.81GB     -  17 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.10             8.81GB     -  24 ATA     spare       Pool0     c1-01
+NET-1.11             8.81GB     -  25 ATA     spare       Pool0     c1-01
+NET-1.12             8.81GB     -  18 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.13             8.81GB     -  19 ATA     spare       Pool0     c1-01
+NET-1.14             8.81GB     -  20 ATA     spare       Pool0     c1-01
+NET-1.15             8.81GB     -  21 ATA     spare       Pool0     c1-01
+NET-1.16             8.81GB     -  22 ATA     spare       Pool0     c1-01
+NET-1.17             8.81GB     -  24 ATA     spare       Pool0     c1-01
+NET-1.18             8.81GB     -  25 ATA     spare       Pool0     c1-01
+NET-1.19             8.81GB     -  26 ATA     spare       Pool0     c1-01
+NET-1.20             8.81GB     -  27 ATA     spare       Pool0     c1-01
+NET-1.21             8.81GB     -  28 ATA     spare       Pool0     c1-01
+NET-1.22             8.81GB     -  29 ATA     spare       Pool0     c1-01
+NET-1.23             8.81GB     -  32 ATA     spare       Pool0     c1-01
+NET-1.24             8.81GB     -  26 ATA     spare       Pool0     c1-01
+NET-1.25             8.81GB     -  27 ATA     spare       Pool0     c1-01
+NET-1.26             8.81GB     -  28 ATA     spare       Pool0     c1-01
+NET-1.27             8.81GB     -  29 ATA     spare       Pool0     c1-01
+NET-1.28             8.81GB     -  32 ATA     spare       Pool0     c1-01
+NET-1.29             8.81GB     -  16 ATA     spare       Pool0     c1-01
+NET-1.30             8.81GB     -  17 ATA     spare       Pool0     c1-01
+NET-1.31             8.81GB     -  18 ATA     spare       Pool0     c1-01
+NET-1.32             8.81GB     -  19 ATA     spare       Pool0     c1-01
+NET-1.33             8.81GB     -  20 ATA     spare       Pool0     c1-01
+NET-1.34             8.81GB     -  21 ATA     spare       Pool0     c1-01
+NET-1.35             8.81GB     -  22 ATA     spare       Pool0     c1-01
+NET-1.36             8.81GB     -  24 ATA     spare       Pool0     c1-01
+NET-1.37             8.81GB     -  25 ATA     spare       Pool0     c1-01
+NET-1.38             8.81GB     -  26 ATA     spare       Pool0     c1-01
+NET-1.39             8.81GB     -  27 ATA     spare       Pool0     c1-01
+NET-1.40             8.81GB     -  28 ATA     spare       Pool0     c1-01
+NET-1.41             8.81GB     -  29 ATA     spare       Pool0     c1-01
+NET-1.42             8.81GB     -  32 ATA     spare       Pool0     c1-01
+c1-01:v7.16              0B     -  16 FCAL    spare       Pool0     c1-01
+c1-01:v7.17              0B     -  17 FCAL    spare       Pool0     c1-01
+c1-01:v7.18              0B     -  18 FCAL    spare       Pool0     c1-01
+c1-01:v7.19              0B     -  19 FCAL    spare       Pool0     c1-01
+c1-01:v7.20              0B     -  20 FCAL    spare       Pool0     c1-01
+c1-01:v7.21              0B     -  21 FCAL    spare       Pool0     c1-01
+c1-01:v7.22              0B     -  22 FCAL    spare       Pool0     c1-01
+c1-01:v7.24              0B     -  24 FCAL    spare       Pool0     c1-01
+c1-01:v7.25              0B     -  25 FCAL    spare       Pool0     c1-01
+c1-01:v7.26              0B     -  26 FCAL    spare       Pool0     c1-01
+c1-01:v7.27              0B     -  27 FCAL    spare       Pool0     c1-01
+c1-01:v7.28              0B     -  28 FCAL    spare       Pool0     c1-01
+c1-01:v7.29              0B     -  29 FCAL    spare       Pool0     c1-01
+c1-01:v7.32              0B     -  32 FCAL    spare       Pool0     c1-01
+56 entries were displayed.
+
+c1::*> aggregate create -aggregate c1n1_data -diskcount 39 -disktype ATA -raidtype raid4 -maxraidsize 13 -simulate true
+  (storage aggregate create)
+
+Error: command failed: Aggregate creation would fail for aggregate "c1n1_data" on node "c1-01". Reason: illegal raid group size; value must be between 3 and 7 for raidtype raid4.
+
+c1::*> system node run
+    run                   run-console           run-service-processor
+
+c1::*> system node run -node c1-01 -
+    -command -reset
+c1::*> system node run -node c1-01
+Type 'exit' or 'Ctrl-D' to return to the CLI
+c1-01> exit
+logout
+
+c1::*> node run
+Type 'exit' or 'Ctrl-D' to return to the CLI
+c1-01> exit
+logout
+
+c1::*> node run -
+    -node    -command -reset
+c1::*> node run lo
+
+Error: the value "lo" is invalid for type <nodename>
+c1::*> node run -l
+
+Error: invalid argument "-l"
+c1::*> node license
+    add                 capacity            clean-up
+    delete              entitlement-risk    license-manager
+    revert-check        show                show-aggregates
+    show-serial-numbers show-status         status
+    update-leases
+
+c1::*> node loc
+
+Error: "loc" is not a recognized command
+c1::*> node -lo
+
+Error: "-lo" is not a recognized command
+c1::*> node run -
+    -node    -command -reset
+
+c1::*> node run -node lo
+
+Error: the value "lo" is invalid for type <nodename>
+c1::*> node run -node locs
+
+Error: the value "locs" is invalid for type <nodename>
+c1::*> node run -node loca
+
+Error: the value "loca" is invalid for type <nodename>
+c1::*> node run -node loca
+
+Error: the value "loca" is invalid for type <nodename>
+c1::*> node run
+Type 'exit' or 'Ctrl-D' to return to the CLI
+c1-01> priv set diag
+Warning: These diagnostic commands are for use by NetApp
+         personnel only.
+c1-01*> options
+acp.domain                   0
+acp.enabled                  on
+acp.netmask                  0
+acp.port
+cdpd.enable                  off
+cdpd.holdtime                180
+cdpd.interval                60
+cf.giveback.auto.after.panic.takeover on
+cf.giveback.auto.delay.seconds 600
+cf.giveback.auto.enable      on
+cf.hw_assist.enable          off
+cf.hw_assist.partner.address
+cf.hw_assist.partner.port
+cf.mode                      non_ha
+cf.sfoaggr_maxtime           120
+cf.takeover.detection.seconds 15
+cf.takeover.on_failure       off
+cf.takeover.on_panic         off
+cf.takeover.on_reboot        off
+cf.takeover.on_short_uptime  off
+disk.abort_threshold.enable  on
+disk.asup_on_mp_loss         on
+disk.auto_assign             on
+disk.auto_assign_policy      default
+disk.latency_check.enable    on
+disk.latency_check.enter_maint on
+disk.maint_center.allowed_entries 1
+disk.maint_center.enable     on
+disk.maint_center.max_disks  84
+disk.maint_center.spares_check on
+disk.powercycle.enable       on
+disk.reassign_ssd.enable     off
+ems.autosuppress.enable      on
+flexscale.flash_pool_caching off
+flexscale.mbuf_inserts       off
+licensed_feature.disk_sanitization.enable off
+lldp.enable                  off
+lldp.xmit.hold               4
+lldp.xmit.interval           30
+locking.grace_lease_seconds  45
+ndmpd.dmp_dir_preload_delta  768
+ndmpd.dmp_dir_ra             64
+qos.rbr.burst_percent        50
+qos.rbrv3.batch_size         1
+qos.rbrv3.grace_period       100
+qos.rbrv3.parallel_proposals 50
+qos.rbrv3.settling_time      25
+qos.rbrv3.timer_interval     5
+ra.path_switch.threshold     100
+raid.background_disk_fw_update.enable on
+raid.bdfu.suspend            off
+raid.bdfu.suspend.time       60
+raid.disk.background_fw_update.raid4.enable on
+raid.disk.copy.auto.enable   on
+raid.media_scrub.enable      on
+raid.media_scrub.rate        600
+raid.media_scrub.spares.enable on
+raid.min_spare_count         1
+raid.mirror_read_plex_pref   local
+raid.mix.disktype.solid_state on
+raid.mix.disktype.solid_state.capacity off
+raid.mix.hdd.disktype.capacity on
+raid.mix.hdd.disktype.performance off
+raid.mix.hdd.rpm.capacity    on
+raid.mix.hdd.rpm.performance off
+raid.reconstruct.perf_impact medium
+raid.reconstruct.wafliron.enable on
+raid.resync.num_concurrent_ios_per_rg 1
+raid.resync.perf_impact      medium
+raid.scrub.duration          0
+raid.scrub.enable            off
+raid.scrub.perf_impact       low
+raid.scrub.schedule
+raid.timeout                 24
+raid.verify.perf_impact      low
+rdma.link_monitor            on
+shelf.atfcx.auto.reset.enable
+shelf.esh4.auto.reset.enable
+sis.allow_auto_gathering     1
+sis.do_idedup_policy_check   off
+sis.max_total_share_workers  128
+sis.max_vfiler_active_ops    8
+sla.enabled                  on
+snapmirror.access            legacy
+snapmirror.checkip.enable    off
+snapmirror.cmode.suspend     off
+snapmirror.delayed_acks.enable on
+snapmirror.fg_ldr_transfer_enabled off
+snapmirror.fg_mcc_handle_rolling_disaster off
+snapmirror.log.enable        on
+snapmirror.vbn_log_enable    off
+snapmirror.volume.local_nwk_bypass.enable on
+tape.reservations            off
+wafl.df.max.percent          2
+wafl.df.wm.percent           1
+wafl.inconsistent.asup_frequency.blks 10
+wafl.inconsistent.asup_frequency.time 24h
+wafl.inconsistent.ems_suppress off
+wafl.maxdirsize              62832
+c1-01*> option raid
+option not found.  Type '?' for a list of commands
+c1-01*> options raid
+raid.background_disk_fw_update.enable on
+raid.bdfu.suspend            off
+raid.bdfu.suspend.time       60
+raid.disk.background_fw_update.raid4.enable on
+raid.disk.copy.auto.enable   on
+raid.media_scrub.enable      on
+raid.media_scrub.rate        600
+raid.media_scrub.spares.enable on
+raid.min_spare_count         1
+raid.mirror_read_plex_pref   local
+raid.mix.disktype.solid_state on
+raid.mix.disktype.solid_state.capacity off
+raid.mix.hdd.disktype.capacity on
+raid.mix.hdd.disktype.performance off
+raid.mix.hdd.rpm.capacity    on
+raid.mix.hdd.rpm.performance off
+raid.reconstruct.perf_impact medium
+raid.reconstruct.wafliron.enable on
+raid.resync.num_concurrent_ios_per_rg 1
+raid.resync.perf_impact      medium
+raid.scrub.duration          0
+raid.scrub.enable            off
+raid.scrub.perf_impact       low
+raid.scrub.schedule
+raid.timeout                 24
+raid.verify.perf_impact      low
+c1-01*> options raid.raid_tp
+No such option raid.raid_tp
+c1-01*> options raid.raid_dp
+No such option raid.raid_dp
+c1-01*> options raid ?
+Setting invalid option raid failed.
+raid.background_disk_fw_update.enable on
+raid.bdfu.suspend            off
+raid.bdfu.suspend.time       60
+raid.disk.background_fw_update.raid4.enable on
+raid.disk.copy.auto.enable   on
+raid.media_scrub.enable      on
+raid.media_scrub.rate        600
+raid.media_scrub.spares.enable on
+raid.min_spare_count         1
+raid.mirror_read_plex_pref   local
+raid.mix.disktype.solid_state on
+raid.mix.disktype.solid_state.capacity off
+raid.mix.hdd.disktype.capacity on
+raid.mix.hdd.disktype.performance off
+raid.mix.hdd.rpm.capacity    on
+raid.mix.hdd.rpm.performance off
+raid.reconstruct.perf_impact medium
+raid.reconstruct.wafliron.enable on
+raid.resync.num_concurrent_ios_per_rg 1
+raid.resync.perf_impact      medium
+raid.scrub.duration          0
+raid.scrub.enable            off
+raid.scrub.perf_impact       low
+raid.scrub.schedule
+raid.timeout                 24
+raid.verify.perf_impact      low
+c1-01*>
