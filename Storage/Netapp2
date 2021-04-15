@@ -1,0 +1,1600 @@
+login as: admin
+Keyboard-interactive authentication prompts from server:
+| Password:
+End of keyboard-interactive prompts from server
+
+Last login time: 4/13/2021 13:38:18
+c1::> disk show
+                     Usable           Disk    Container   Container
+Disk                   Size Shelf Bay Type    Type        Name      Owner
+---------------- ---------- ----- --- ------- ----------- --------- --------
+NET-1.1              8.81GB     -  16 ATA     spare       Pool0     c1-01
+NET-1.2              8.81GB     -  17 ATA     spare       Pool0     c1-01
+NET-1.3              8.81GB     -  18 ATA     spare       Pool0     c1-01
+NET-1.4              8.81GB     -  19 ATA     spare       Pool0     c1-01
+NET-1.5              8.81GB     -  20 ATA     spare       Pool0     c1-01
+NET-1.6              8.81GB     -  21 ATA     spare       Pool0     c1-01
+NET-1.7              8.81GB     -  22 ATA     spare       Pool0     c1-01
+NET-1.8              8.81GB     -  16 ATA     spare       Pool0     c1-01
+NET-1.9              8.81GB     -  17 ATA     aggregate   aggr0_c1_01
+                                                                    c1-01
+NET-1.10             8.81GB     -  24 ATA     spare       Pool0     c1-01
+NET-1.11             8.81GB     -  25 ATA     spare       Pool0     c1-01
+NET-1.12             8.81GB     -  18 ATA     aggregate   aggr0_c1_01
+                                                                    c1-01
+NET-1.13             8.81GB     -  19 ATA     spare       Pool0     c1-01
+NET-1.14             8.81GB     -  20 ATA     spare       Pool0     c1-01
+NET-1.15             8.81GB     -  21 ATA     spare       Pool0     c1-01
+NET-1.16             8.81GB     -  22 ATA     spare       Pool0     c1-01
+NET-1.17             8.81GB     -  24 ATA     spare       Pool0     c1-01
+NET-1.18             8.81GB     -  25 ATA     spare       Pool0     c1-01
+NET-1.19             8.81GB     -  26 ATA     spare       Pool0     c1-01
+NET-1.20             8.81GB     -  27 ATA     spare       Pool0     c1-01
+NET-1.21             8.81GB     -  28 ATA     spare       Pool0     c1-01
+NET-1.22             8.81GB     -  29 ATA     spare       Pool0     c1-01
+NET-1.23             8.81GB     -  32 ATA     spare       Pool0     c1-01
+NET-1.24             8.81GB     -  26 ATA     spare       Pool0     c1-01
+NET-1.25             8.81GB     -  27 ATA     spare       Pool0     c1-01
+NET-1.26             8.81GB     -  28 ATA     spare       Pool0     c1-01
+NET-1.27             8.81GB     -  29 ATA     spare       Pool0     c1-01
+NET-1.28             8.81GB     -  32 ATA     spare       Pool0     c1-01
+NET-1.29             8.81GB     -  16 ATA     spare       Pool0     c1-01
+NET-1.30             8.81GB     -  17 ATA     spare       Pool0     c1-01
+NET-1.31             8.81GB     -  18 ATA     spare       Pool0     c1-01
+NET-1.32             8.81GB     -  19 ATA     spare       Pool0     c1-01
+NET-1.33             8.81GB     -  20 ATA     spare       Pool0     c1-01
+NET-1.34             8.81GB     -  21 ATA     spare       Pool0     c1-01
+NET-1.35             8.81GB     -  22 ATA     spare       Pool0     c1-01
+NET-1.36             8.81GB     -  24 ATA     spare       Pool0     c1-01
+NET-1.37             8.81GB     -  25 ATA     spare       Pool0     c1-01
+NET-1.38             8.81GB     -  26 ATA     spare       Pool0     c1-01
+NET-1.39             8.81GB     -  27 ATA     spare       Pool0     c1-01
+NET-1.40             8.81GB     -  28 ATA     spare       Pool0     c1-01
+NET-1.41             8.81GB     -  29 ATA     spare       Pool0     c1-01
+NET-1.42             8.81GB     -  32 ATA     spare       Pool0     c1-01
+c1-01:v7.16              0B     -  16 FCAL    spare       Pool0     c1-01
+c1-01:v7.17              0B     -  17 FCAL    spare       Pool0     c1-01
+c1-01:v7.18              0B     -  18 FCAL    spare       Pool0     c1-01
+c1-01:v7.19              0B     -  19 FCAL    spare       Pool0     c1-01
+c1-01:v7.20              0B     -  20 FCAL    spare       Pool0     c1-01
+c1-01:v7.21              0B     -  21 FCAL    spare       Pool0     c1-01
+c1-01:v7.22              0B     -  22 FCAL    spare       Pool0     c1-01
+c1-01:v7.24              0B     -  24 FCAL    spare       Pool0     c1-01
+c1-01:v7.25              0B     -  25 FCAL    spare       Pool0     c1-01
+c1-01:v7.26              0B     -  26 FCAL    spare       Pool0     c1-01
+c1-01:v7.27              0B     -  27 FCAL    spare       Pool0     c1-01
+c1-01:v7.28              0B     -  28 FCAL    spare       Pool0     c1-01
+c1-01:v7.29              0B     -  29 FCAL    spare       Pool0     c1-01
+Press <space> to page down, <return> for next line, or 'q' to quit... q
+
+c1::> aggregate
+    aggregate
+c1::> aggregate create -ad
+
+Error: invalid argument "-ad"
+c1::> aggregate create -aggregate c1n1_data -disk
+    -diskcount -diskrpm   -disksize  -disktype  -diskclass -disklist
+c1::> aggregate create -aggregate c1n1_data -diskc
+    -diskcount -diskclass
+
+c1::> aggregate create -aggregate c1n1_data -diskcount 39 -
+    -chksumstyle           -diskrpm               -disksize
+    -disktype              -diskclass             -mirror
+    -pool                  -node                  -maxraidsize
+    -raidtype              -simulate              -snaplock-type
+    -encrypt-with-aggr-key
+c1::> aggregate create -aggregate c1n1_data -diskcount 39 -disktype ATA -raidtype raid4 -maxraidsize 1                  3 -simulate true
+  (storage aggregate create)
+
+Error: command failed: Aggregate creation would fail for aggregate "c1n1_data" on node "c1-01". Reason: illegal raid
+       group size; value must be between 3 and 7 for raidtype raid4.
+
+c1::> node run
+
+Error: command failed: Too many users logged in! Try again later.
+
+c1::> node run -
+    -node    -command -reset
+c1::> node run -
+    -node    -command -reset
+
+c1::> node run -node c1-01
+
+Error: command failed: Too many users logged in! Try again later.
+
+c1::> node run -node c1-01 -
+    -command -reset
+c1::> node run -node c1-01 -
+    -command -reset
+
+c1::> node run -node c1-01 -reset
+
+c1::> node run
+Type 'exit' or 'Ctrl-D' to return to the CLI
+c1-01> priv set diag
+Warning: These diagnostic commands are for use by NetApp
+         personnel only.
+c1-01*> options raid.raid4.raidsize.override true
+c1-01*> exit
+logout
+
+c1::> aggregate create -aggregate c1n1_data -diskcount 39 -disktype ATA -raidtype raid4 -maxraidsize 13 -simulate true
+  (storage aggregate create)
+
+The layout for aggregate "c1n1_data" on node "c1-01" would be:
+
+First Plex
+
+  RAID Group rg0, 13 disks (block checksum, raid4)
+                                                      Usable Physical
+    Position   Disk                      Type           Size     Size
+    ---------- ------------------------- ---------- -------- --------
+    parity     NET-1.1                   ATA               -        -
+    data       NET-1.29                  ATA          8.79GB   8.82GB
+    data       NET-1.13                  ATA          8.79GB   8.82GB
+    data       NET-1.2                   ATA          8.79GB   8.82GB
+    data       NET-1.30                  ATA          8.79GB   8.82GB
+    data       NET-1.14                  ATA          8.79GB   8.82GB
+    data       NET-1.3                   ATA          8.79GB   8.82GB
+    data       NET-1.31                  ATA          8.79GB   8.82GB
+    data       NET-1.15                  ATA          8.79GB   8.82GB
+    data       NET-1.4                   ATA          8.79GB   8.82GB
+    data       NET-1.32                  ATA          8.79GB   8.82GB
+    data       NET-1.16                  ATA          8.79GB   8.82GB
+    data       NET-1.5                   ATA          8.79GB   8.82GB
+
+  RAID Group rg1, 13 disks (block checksum, raid4)
+                                                      Usable Physical
+    Position   Disk                      Type           Size     Size
+    ---------- ------------------------- ---------- -------- --------
+    parity     NET-1.33                  ATA               -        -
+    data       NET-1.6                   ATA          8.79GB   8.82GB
+    data       NET-1.17                  ATA          8.79GB   8.82GB
+    data       NET-1.34                  ATA          8.79GB   8.82GB
+    data       NET-1.7                   ATA          8.79GB   8.82GB
+    data       NET-1.18                  ATA          8.79GB   8.82GB
+    data       NET-1.35                  ATA          8.79GB   8.82GB
+    data       NET-1.10                  ATA          8.79GB   8.82GB
+    data       NET-1.19                  ATA          8.79GB   8.82GB
+    data       NET-1.36                  ATA          8.79GB   8.82GB
+    data       NET-1.11                  ATA          8.79GB   8.82GB
+    data       NET-1.20                  ATA          8.79GB   8.82GB
+    data       NET-1.37                  ATA          8.79GB   8.82GB
+
+  RAID Group rg2, 13 disks (block checksum, raid4)
+                                                      Usable Physical
+    Position   Disk                      Type           Size     Size
+    ---------- ------------------------- ---------- -------- --------
+    parity     NET-1.24                  ATA               -        -
+    data       NET-1.38                  ATA          8.79GB   8.82GB
+    data       NET-1.21                  ATA          8.79GB   8.82GB
+    data       NET-1.25                  ATA          8.79GB   8.82GB
+    data       NET-1.39                  ATA          8.79GB   8.82GB
+    data       NET-1.22                  ATA          8.79GB   8.82GB
+    data       NET-1.26                  ATA          8.79GB   8.82GB
+    data       NET-1.40                  ATA          8.79GB   8.82GB
+    data       NET-1.23                  ATA          8.79GB   8.82GB
+    data       NET-1.27                  ATA          8.79GB   8.82GB
+    data       NET-1.41                  ATA          8.79GB   8.82GB
+    data       NET-1.28                  ATA          8.79GB   8.82GB
+    data       NET-1.42                  ATA          8.79GB   8.82GB
+
+Press <space> to page down, <return> for next line, or 'q' to quit... q
+
+c1::> aggregate create -aggregate c1n1_data -diskcount 39 -disktype ATA -raidtype raid4 -maxraidsize 13
+  (storage aggregate create)
+
+Info: The layout for aggregate "c1n1_data" on node "c1-01" would be:
+
+      First Plex
+
+        RAID Group rg0, 13 disks (block checksum, raid4)
+                                                            Usable Physical
+          Position   Disk                      Type           Size     Size
+          ---------- ------------------------- ---------- -------- --------
+          parity     NET-1.1                   ATA               -        -
+          data       NET-1.29                  ATA          8.79GB   8.82GB
+          data       NET-1.13                  ATA          8.79GB   8.82GB
+          data       NET-1.2                   ATA          8.79GB   8.82GB
+          data       NET-1.30                  ATA          8.79GB   8.82GB
+          data       NET-1.14                  ATA          8.79GB   8.82GB
+          data       NET-1.3                   ATA          8.79GB   8.82GB
+          data       NET-1.31                  ATA          8.79GB   8.82GB
+          data       NET-1.15                  ATA          8.79GB   8.82GB
+          data       NET-1.4                   ATA          8.79GB   8.82GB
+          data       NET-1.32                  ATA          8.79GB   8.82GB
+          data       NET-1.16                  ATA          8.79GB   8.82GB
+          data       NET-1.5                   ATA          8.79GB   8.82GB
+
+        RAID Group rg1, 13 disks (block checksum, raid4)
+                                                            Usable Physical
+          Position   Disk                      Type           Size     Size
+          ---------- ------------------------- ---------- -------- --------
+          parity     NET-1.33                  ATA               -        -
+          data       NET-1.6                   ATA          8.79GB   8.82GB
+          data       NET-1.17                  ATA          8.79GB   8.82GB
+          data       NET-1.34                  ATA          8.79GB   8.82GB
+          data       NET-1.7                   ATA          8.79GB   8.82GB
+          data       NET-1.18                  ATA          8.79GB   8.82GB
+          data       NET-1.35                  ATA          8.79GB   8.82GB
+          data       NET-1.10                  ATA          8.79GB   8.82GB
+          data       NET-1.19                  ATA          8.79GB   8.82GB
+          data       NET-1.36                  ATA          8.79GB   8.82GB
+          data       NET-1.11                  ATA          8.79GB   8.82GB
+          data       NET-1.20                  ATA          8.79GB   8.82GB
+          data       NET-1.37                  ATA          8.79GB   8.82GB
+
+        RAID Group rg2, 13 disks (block checksum, raid4)
+                                                            Usable Physical
+          Position   Disk                      Type           Size     Size
+          ---------- ------------------------- ---------- -------- --------
+          parity     NET-1.24                  ATA               -        -
+          data       NET-1.38                  ATA          8.79GB   8.82GB
+          data       NET-1.21                  ATA          8.79GB   8.82GB
+          data       NET-1.25                  ATA          8.79GB   8.82GB
+          data       NET-1.39                  ATA          8.79GB   8.82GB
+          data       NET-1.22                  ATA          8.79GB   8.82GB
+          data       NET-1.26                  ATA          8.79GB   8.82GB
+          data       NET-1.40                  ATA          8.79GB   8.82GB
+          data       NET-1.23                  ATA          8.79GB   8.82GB
+          data       NET-1.27                  ATA          8.79GB   8.82GB
+          data       NET-1.41                  ATA          8.79GB   8.82GB
+          data       NET-1.28                  ATA          8.79GB   8.82GB
+          data       NET-1.42                  ATA          8.79GB   8.82GB
+
+Press <space> to page down, <return> for next line, or 'q' to quit... q
+Do you want to continue? {y|n}: y
+[Job 23] Job succeeded: DONE
+
+c1::> rows 0
+
+c1::> aggregate
+    aggregate
+c1::> aggregate show
+Error: Ambiguous command.  Possible matches include:
+       metrocluster check aggregate show
+       statistics aggregate show
+       storage aggregate show
+       storage aggregate show-auto-provision-progress
+       storage aggregate show-cumulated-efficiency
+       storage aggregate show-efficiency
+       storage aggregate show-resync-status
+       storage aggregate show-scrub-status
+       storage aggregate show-space
+       storage aggregate show-spare-disks
+       storage aggregate show-status
+
+c1::> storage aggregate show
+
+
+Aggregate     Size Available Used% State   #Vols  Nodes            RAID Status
+--------- -------- --------- ----- ------- ------ ---------------- ------------
+aggr0_c1_01 7.51GB   374.8MB   95% online       1 c1-01            raid4,
+                                                                   normal
+c1n1_data  284.8GB   284.8GB    0% online       0 c1-01            raid4,
+                                                                   normal
+2 entries were displayed.
+
+c1::> disk show
+                     Usable           Disk    Container   Container
+Disk                   Size Shelf Bay Type    Type        Name      Owner
+---------------- ---------- ----- --- ------- ----------- --------- --------
+NET-1.1              8.81GB     -  16 ATA     aggregate   c1n1_data c1-01
+NET-1.2              8.81GB     -  17 ATA     aggregate   c1n1_data c1-01
+NET-1.3              8.81GB     -  18 ATA     aggregate   c1n1_data c1-01
+NET-1.4              8.81GB     -  19 ATA     aggregate   c1n1_data c1-01
+NET-1.5              8.81GB     -  20 ATA     aggregate   c1n1_data c1-01
+NET-1.6              8.81GB     -  21 ATA     aggregate   c1n1_data c1-01
+NET-1.7              8.81GB     -  22 ATA     aggregate   c1n1_data c1-01
+NET-1.8              8.81GB     -  16 ATA     spare       Pool0     c1-01
+NET-1.9              8.81GB     -  17 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.10             8.81GB     -  24 ATA     aggregate   c1n1_data c1-01
+NET-1.11             8.81GB     -  25 ATA     aggregate   c1n1_data c1-01
+NET-1.12             8.81GB     -  18 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.13             8.81GB     -  19 ATA     aggregate   c1n1_data c1-01
+NET-1.14             8.81GB     -  20 ATA     aggregate   c1n1_data c1-01
+NET-1.15             8.81GB     -  21 ATA     aggregate   c1n1_data c1-01
+NET-1.16             8.81GB     -  22 ATA     aggregate   c1n1_data c1-01
+NET-1.17             8.81GB     -  24 ATA     aggregate   c1n1_data c1-01
+NET-1.18             8.81GB     -  25 ATA     aggregate   c1n1_data c1-01
+NET-1.19             8.81GB     -  26 ATA     aggregate   c1n1_data c1-01
+NET-1.20             8.81GB     -  27 ATA     aggregate   c1n1_data c1-01
+NET-1.21             8.81GB     -  28 ATA     aggregate   c1n1_data c1-01
+NET-1.22             8.81GB     -  29 ATA     aggregate   c1n1_data c1-01
+NET-1.23             8.81GB     -  32 ATA     aggregate   c1n1_data c1-01
+NET-1.24             8.81GB     -  26 ATA     aggregate   c1n1_data c1-01
+NET-1.25             8.81GB     -  27 ATA     aggregate   c1n1_data c1-01
+NET-1.26             8.81GB     -  28 ATA     aggregate   c1n1_data c1-01
+NET-1.27             8.81GB     -  29 ATA     aggregate   c1n1_data c1-01
+NET-1.28             8.81GB     -  32 ATA     aggregate   c1n1_data c1-01
+NET-1.29             8.81GB     -  16 ATA     aggregate   c1n1_data c1-01
+NET-1.30             8.81GB     -  17 ATA     aggregate   c1n1_data c1-01
+NET-1.31             8.81GB     -  18 ATA     aggregate   c1n1_data c1-01
+NET-1.32             8.81GB     -  19 ATA     aggregate   c1n1_data c1-01
+NET-1.33             8.81GB     -  20 ATA     aggregate   c1n1_data c1-01
+NET-1.34             8.81GB     -  21 ATA     aggregate   c1n1_data c1-01
+NET-1.35             8.81GB     -  22 ATA     aggregate   c1n1_data c1-01
+NET-1.36             8.81GB     -  24 ATA     aggregate   c1n1_data c1-01
+NET-1.37             8.81GB     -  25 ATA     aggregate   c1n1_data c1-01
+NET-1.38             8.81GB     -  26 ATA     aggregate   c1n1_data c1-01
+NET-1.39             8.81GB     -  27 ATA     aggregate   c1n1_data c1-01
+NET-1.40             8.81GB     -  28 ATA     aggregate   c1n1_data c1-01
+NET-1.41             8.81GB     -  29 ATA     aggregate   c1n1_data c1-01
+NET-1.42             8.81GB     -  32 ATA     aggregate   c1n1_data c1-01
+c1-01:v7.16              0B     -  16 FCAL    spare       Pool0     c1-01
+c1-01:v7.17              0B     -  17 FCAL    spare       Pool0     c1-01
+c1-01:v7.18              0B     -  18 FCAL    spare       Pool0     c1-01
+c1-01:v7.19              0B     -  19 FCAL    spare       Pool0     c1-01
+c1-01:v7.20              0B     -  20 FCAL    spare       Pool0     c1-01
+c1-01:v7.21              0B     -  21 FCAL    spare       Pool0     c1-01
+c1-01:v7.22              0B     -  22 FCAL    spare       Pool0     c1-01
+c1-01:v7.24              0B     -  24 FCAL    spare       Pool0     c1-01
+c1-01:v7.25              0B     -  25 FCAL    spare       Pool0     c1-01
+c1-01:v7.26              0B     -  26 FCAL    spare       Pool0     c1-01
+c1-01:v7.27              0B     -  27 FCAL    spare       Pool0     c1-01
+c1-01:v7.28              0B     -  28 FCAL    spare       Pool0     c1-01
+c1-01:v7.29              0B     -  29 FCAL    spare       Pool0     c1-01
+c1-01:v7.32              0B     -  32 FCAL    spare       Pool0     c1-01
+56 entries were displayed.
+
+c1::> disk -
+
+Error: "-" is not a recognized command
+c1::> disk
+    assign          error           fail            option
+    remove          removeowner     replace         set-foreign-lun
+    set-led         show            updatefirmware  zerospares
+
+c1::> node run
+Type 'exit' or 'Ctrl-D' to return to the CLI
+c1-01> priv set diag
+Warning: These diagnostic commands are for use by NetApp
+         personnel only.
+c1-01*> disk
+usage: disk <options>
+Options are:
+        assign {<disk_name> | all | [-T <storage type> | -shelf <shelf name>] [-n <count>] | auto} [-p <pool>] {[-o <ownername>] [-s <sysid>] | [-copy-ownership-from <disk-name>]} [-c block|advanced_zoned] [-f] - assign a disk to a filer or all unowned disks by specifying "all"  or <count> number of unowned disks
+        ddr_label {repair | print | delete | dumpraw | rm_qualtable | modify [-c] -o <offset> -v <value> | start_scan | pause_scan | resume_scan | error_scan | rediscover | reinit } [-f] [-d all | <disk_list>]
+        dumpevents { sanown | config_checker | raid } - Dumps the sanown/config-checker/raid event queue since boot
+        dump_telemetry_log <disk_name> - retrieves NVMe host-initiated telemetry log and writes to file
+        encrypt { destroy | lock | rekey | rekey_fips | revert_original | sanitize | show | show_fips } - perform tasks specific to self-encrypting disks
+        fail [-i] [-f] <disk_name>  - fail a file system disk
+        maint { start | abort | status | list} - run maintenance tests on one or more disks
+        partition { { -n { 2 | 3 } [-u <pool_uuid>] } | { -n <num_parts> -u <pool_uuid> } } [-i <part_idx> -b <raw_blks>].. <disk_name> - partition a disk
+        power_cycle [ -f ] { [-d <disk_list>] | [ -c <channel_name> [ -s <shelf_number> ] ] } - power-cycle one or more disks
+        reassign {-s <old_sysid>} [-d <new_sysid>] [-p <partner_sysid>] [-r <dr-partner-sysid> ] - reassign disks from old filer
+        remove [-w] <disk_name>     - remove a spare disk
+        remove_ownership [<disk_name> | all | -s <sysid>] [-f] - revert/remove disk ownership
+        replace {start [-f] [-m] <disk_name> <spare_disk_name>} | {stop <disk_name>} - replace a file system disk with a spare disk or stop replacing
+        sanitize { start | abort | status | release } - sanitize one or more disks
+        sanown_stats {start| stop| show }- collect sanown event stats
+        scrub  { start | stop }     - start or stop disk scrubbing
+        shm_stats [<disk_name> | asup | clear_errors]     - Storage Health Monitor statistics for a disk
+        show [-o <ownername> | -s <sysid> | -n | -v | -a | -m | -w | -S <disk_serialno> | -c <cluster_disk_name> ]  - lists disks and owners
+        simpull <disk_name1> [<disk_name2> [<disk_name3> ... ]]  - simulate one or more disk pulls
+        simpush [<sim_disk_path_name1> [<sim_disk_path_name2> [<sim_disk_path_name3> ...]] | -l] - simulate one or more disk pushes or list available disks to push
+        unfail [-s] <disk_name>     - unfail a disk  (-s  not valid in maintenance mode)
+        unpartition {<disk_name> | all} - unpartition a partitioned disk or unpartition all the partitioned disks
+        zero spares - Zero all spare disks
+c1-01*> disk simpull c1-01:v7.16
+disk simpull: Disk c1-01:v7.16 does not exist.
+c1-01*> disk simpull v7.16
+c1-01*> disk simpull v7.18
+c1-01*> disk simpull v7.17
+c1-01*> disk simpull v7.19
+c1-01*> disk simpull v7.20
+c1-01*> disk simpull v7.21
+c1-01*> disk simpull v7.22
+c1-01*> disk simpull v7.23
+disk simpull: Disk v7.23 does not exist.
+c1-01*> disk simpull v7.24
+c1-01*> disk simpull v7.25
+c1-01*> disk simpull v7.26
+c1-01*> disk simpull v7.27
+c1-01*> disk simpull v7.28
+c1-01*> disk simpull v7.29
+c1-01*> disk simpull v7.32
+c1-01*> disk list
+disk: Did not recognize option "list".
+usage: disk <options>
+Options are:
+        assign {<disk_name> | all | [-T <storage type> | -shelf <shelf name>] [-n <count>] | auto} [-p <pool>] {[-o <ownername>] [-s <sysid>] | [-copy-ownership-from <disk-name>]} [-c block|advanced_zoned] [-f] - assign a disk to a filer or all unowned disks by specifying "all"  or <count> number of unowned disks
+        ddr_label {repair | print | delete | dumpraw | rm_qualtable | modify [-c] -o <offset> -v <value> | start_scan | pause_scan | resume_scan | error_scan | rediscover | reinit } [-f] [-d all | <disk_list>]
+        dumpevents { sanown | config_checker | raid } - Dumps the sanown/config-checker/raid event queue since boot
+        dump_telemetry_log <disk_name> - retrieves NVMe host-initiated telemetry log and writes to file
+        encrypt { destroy | lock | rekey | rekey_fips | revert_original | sanitize | show | show_fips } - perform tasks specific to self-encrypting disks
+        fail [-i] [-f] <disk_name>  - fail a file system disk
+        maint { start | abort | status | list} - run maintenance tests on one or more disks
+        partition { { -n { 2 | 3 } [-u <pool_uuid>] } | { -n <num_parts> -u <pool_uuid> } } [-i <part_idx> -b <raw_blks>].. <disk_name> - partition a disk
+        power_cycle [ -f ] { [-d <disk_list>] | [ -c <channel_name> [ -s <shelf_number> ] ] } - power-cycle one or more disks
+        reassign {-s <old_sysid>} [-d <new_sysid>] [-p <partner_sysid>] [-r <dr-partner-sysid> ] - reassign disks from old filer
+        remove [-w] <disk_name>     - remove a spare disk
+        remove_ownership [<disk_name> | all | -s <sysid>] [-f] - revert/remove disk ownership
+        replace {start [-f] [-m] <disk_name> <spare_disk_name>} | {stop <disk_name>} - replace a file system disk with a spare disk or stop replacing
+        sanitize { start | abort | status | release } - sanitize one or more disks
+        sanown_stats {start| stop| show }- collect sanown event stats
+        scrub  { start | stop }     - start or stop disk scrubbing
+        shm_stats [<disk_name> | asup | clear_errors]     - Storage Health Monitor statistics for a disk
+        show [-o <ownername> | -s <sysid> | -n | -v | -a | -m | -w | -S <disk_serialno> | -c <cluster_disk_name> ]  - lists disks and owners
+        simpull <disk_name1> [<disk_name2> [<disk_name3> ... ]]  - simulate one or more disk pulls
+        simpush [<sim_disk_path_name1> [<sim_disk_path_name2> [<sim_disk_path_name3> ...]] | -l] - simulate one or more disk pushes or list available disks to push
+        unfail [-s] <disk_name>     - unfail a disk  (-s  not valid in maintenance mode)
+        unpartition {<disk_name> | all} - unpartition a partitioned disk or unpartition all the partitioned disks
+        zero spares - Zero all spare disks
+c1-01*> exit
+logout
+
+c1::> disk list
+
+Error: "list" is not a recognized command
+
+c1::> disk show
+                     Usable           Disk    Container   Container
+Disk                   Size Shelf Bay Type    Type        Name      Owner
+---------------- ---------- ----- --- ------- ----------- --------- --------
+NET-1.1              8.81GB     -  16 ATA     aggregate   c1n1_data c1-01
+NET-1.2              8.81GB     -  17 ATA     aggregate   c1n1_data c1-01
+NET-1.3              8.81GB     -  18 ATA     aggregate   c1n1_data c1-01
+NET-1.4              8.81GB     -  19 ATA     aggregate   c1n1_data c1-01
+NET-1.5              8.81GB     -  20 ATA     aggregate   c1n1_data c1-01
+NET-1.6              8.81GB     -  21 ATA     aggregate   c1n1_data c1-01
+NET-1.7              8.81GB     -  22 ATA     aggregate   c1n1_data c1-01
+NET-1.8              8.81GB     -  16 ATA     spare       Pool0     c1-01
+NET-1.9              8.81GB     -  17 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.10             8.81GB     -  24 ATA     aggregate   c1n1_data c1-01
+NET-1.11             8.81GB     -  25 ATA     aggregate   c1n1_data c1-01
+NET-1.12             8.81GB     -  18 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.13             8.81GB     -  19 ATA     aggregate   c1n1_data c1-01
+NET-1.14             8.81GB     -  20 ATA     aggregate   c1n1_data c1-01
+NET-1.15             8.81GB     -  21 ATA     aggregate   c1n1_data c1-01
+NET-1.16             8.81GB     -  22 ATA     aggregate   c1n1_data c1-01
+NET-1.17             8.81GB     -  24 ATA     aggregate   c1n1_data c1-01
+NET-1.18             8.81GB     -  25 ATA     aggregate   c1n1_data c1-01
+NET-1.19             8.81GB     -  26 ATA     aggregate   c1n1_data c1-01
+NET-1.20             8.81GB     -  27 ATA     aggregate   c1n1_data c1-01
+NET-1.21             8.81GB     -  28 ATA     aggregate   c1n1_data c1-01
+NET-1.22             8.81GB     -  29 ATA     aggregate   c1n1_data c1-01
+NET-1.23             8.81GB     -  32 ATA     aggregate   c1n1_data c1-01
+NET-1.24             8.81GB     -  26 ATA     aggregate   c1n1_data c1-01
+NET-1.25             8.81GB     -  27 ATA     aggregate   c1n1_data c1-01
+NET-1.26             8.81GB     -  28 ATA     aggregate   c1n1_data c1-01
+NET-1.27             8.81GB     -  29 ATA     aggregate   c1n1_data c1-01
+NET-1.28             8.81GB     -  32 ATA     aggregate   c1n1_data c1-01
+NET-1.29             8.81GB     -  16 ATA     aggregate   c1n1_data c1-01
+NET-1.30             8.81GB     -  17 ATA     aggregate   c1n1_data c1-01
+NET-1.31             8.81GB     -  18 ATA     aggregate   c1n1_data c1-01
+NET-1.32             8.81GB     -  19 ATA     aggregate   c1n1_data c1-01
+NET-1.33             8.81GB     -  20 ATA     aggregate   c1n1_data c1-01
+NET-1.34             8.81GB     -  21 ATA     aggregate   c1n1_data c1-01
+NET-1.35             8.81GB     -  22 ATA     aggregate   c1n1_data c1-01
+NET-1.36             8.81GB     -  24 ATA     aggregate   c1n1_data c1-01
+NET-1.37             8.81GB     -  25 ATA     aggregate   c1n1_data c1-01
+NET-1.38             8.81GB     -  26 ATA     aggregate   c1n1_data c1-01
+NET-1.39             8.81GB     -  27 ATA     aggregate   c1n1_data c1-01
+NET-1.40             8.81GB     -  28 ATA     aggregate   c1n1_data c1-01
+NET-1.41             8.81GB     -  29 ATA     aggregate   c1n1_data c1-01
+NET-1.42             8.81GB     -  32 ATA     aggregate   c1n1_data c1-01
+42 entries were displayed.
+
+c1::> system
+    bridge            chassis           controller        feature-usage
+    fru-check         health            license           node
+    script            service-processor services          smtape
+    snmp              status            switch            timeout
+
+c1::> systemshe
+
+Error: "systemshe" is not a recognized command
+c1::> systemshell
+
+Error: "systemshell" is not a recognized command
+
+c1::> systemshell -u
+
+Error: "systemshell" is not a recognized command
+c1::> set diagnostic
+
+Warning: These diagnostic commands are for use by NetApp personnel only.
+Do you want to continue? {y|n}: y
+
+c1::*> systemshell
+  (system node systemshell)
+diag@127.0.0.1's password:
+
+Warning:  The system shell provides access to low-level
+diagnostic tools that can cause irreparable damage to
+the system if not used properly.  Use this environment
+only when directed to do so by support personnel.
+
+c1-01% cd /sim/dev
+c1-01% ll
+total 8
+drwxr-xr-x  3 root  wheel  3584 Apr 13 14:34 ,disks/
+drwxr-xr-x  2 root  wheel   512 Apr 13 10:52 ,tapes/
+c1-01% cd ,disks/
+c1-01% ll
+total 4143024
+drwxr-xr-x  2 root  wheel         1024 Apr 13 14:34 ,pulled/
+-rwxr-xr-x  1 root  wheel          912 Apr 13 14:34 ,reservations*
+-rw-r--r--  1 root  wheel         4144 Apr 13 11:31 Shelf:DiskShelf14
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 12:12 v0.16:NETAPP__:VD-9000MB-FZ-ATA:98861500:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:36 v0.17:NETAPP__:VD-9000MB-FZ-ATA:98861501:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:36 v0.18:NETAPP__:VD-9000MB-FZ-ATA:98861502:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.19:NETAPP__:VD-9000MB-FZ-ATA:98861503:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.20:NETAPP__:VD-9000MB-FZ-ATA:98861504:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.21:NETAPP__:VD-9000MB-FZ-ATA:98861505:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.22:NETAPP__:VD-9000MB-FZ-ATA:98861506:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.24:NETAPP__:VD-9000MB-FZ-ATA:98861507:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.25:NETAPP__:VD-9000MB-FZ-ATA:98861508:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.26:NETAPP__:VD-9000MB-FZ-ATA:98861509:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.27:NETAPP__:VD-9000MB-FZ-ATA:98861510:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.28:NETAPP__:VD-9000MB-FZ-ATA:98861511:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.29:NETAPP__:VD-9000MB-FZ-ATA:98861512:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.32:NETAPP__:VD-9000MB-FZ-ATA:98861513:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:32 v1.16:NETAPP__:VD-9000MB-FZ-ATA:11162600:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.17:NETAPP__:VD-9000MB-FZ-ATA:11162601:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.18:NETAPP__:VD-9000MB-FZ-ATA:11162602:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.19:NETAPP__:VD-9000MB-FZ-ATA:11162603:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.20:NETAPP__:VD-9000MB-FZ-ATA:11162604:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.21:NETAPP__:VD-9000MB-FZ-ATA:11162605:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.22:NETAPP__:VD-9000MB-FZ-ATA:11162606:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.24:NETAPP__:VD-9000MB-FZ-ATA:11162607:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.25:NETAPP__:VD-9000MB-FZ-ATA:11162608:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.26:NETAPP__:VD-9000MB-FZ-ATA:11162609:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.27:NETAPP__:VD-9000MB-FZ-ATA:11162610:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.28:NETAPP__:VD-9000MB-FZ-ATA:11162611:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.29:NETAPP__:VD-9000MB-FZ-ATA:11162612:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.32:NETAPP__:VD-9000MB-FZ-ATA:11162613:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.16:NETAPP__:VD-9000MB-FZ-ATA:13553400:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.17:NETAPP__:VD-9000MB-FZ-ATA:13553401:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.18:NETAPP__:VD-9000MB-FZ-ATA:13553402:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.19:NETAPP__:VD-9000MB-FZ-ATA:13553403:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.20:NETAPP__:VD-9000MB-FZ-ATA:13553404:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.21:NETAPP__:VD-9000MB-FZ-ATA:13553405:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.22:NETAPP__:VD-9000MB-FZ-ATA:13553406:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.24:NETAPP__:VD-9000MB-FZ-ATA:13553407:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.25:NETAPP__:VD-9000MB-FZ-ATA:13553408:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.26:NETAPP__:VD-9000MB-FZ-ATA:13553409:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.27:NETAPP__:VD-9000MB-FZ-ATA:13553410:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.28:NETAPP__:VD-9000MB-FZ-ATA:13553411:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.29:NETAPP__:VD-9000MB-FZ-ATA:13553412:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.32:NETAPP__:VD-9000MB-FZ-ATA:13553413:20799504
+c1-01% vsim_makedisks -h
+Usage: /usr/sbin/vsim_makedisks [ -n <additional number of disks to create> ]
+          [ -t <disk type ID> ]
+          [ -e <additional sectors> ]
+          [ -a <adapter on which to start populating disks ]
+          [ -h ]
+
+By default 5 disks will be added. The <disk type ID> can be one
+of the following: (NOTE, 0 is the default)
+                                                               Fast
+Type Vendor ID Product ID       Usable Size[B] Actual Size[B]  Zero  BPS   RPM
+  0  NETAPP__  VD-16MB_________     16,777,216     38,273,024   No   512  10000
+  1  NETAPP__  VD-35MB_________     35,913,728     57,409,536   No   512  10000
+  2  NETAPP__  VD-50MB_________     52,428,800     73,924,608   No   512  10000
+  3  NETAPP__  VD-100MB________    104,857,600    126,353,408   No   512  10000
+  4  NETAPP__  VD-500MB________    524,288,000    545,783,808   No   512  10000
+  5  NETAPP__  VD-1000MB_______  1,048,576,000  1,070,071,808   No   512  10000
+  6  NETAPP__  VD-16MB-FZ______     16,777,216     38,273,024   Yes  512  15000
+  7  NETAPP__  VD-35MB-FZ______     35,913,728     57,409,536   Yes  512  15000
+  8  NETAPP__  VD-50MB-FZ______     52,428,800     73,924,608   Yes  512  15000
+  9  NETAPP__  VD-100MB-FZ_____    104,857,600    126,353,408   Yes  512  15000
+ 10  NETAPP__  VD-500MB-FZ_____    524,288,000    545,783,808   Yes  512  15000
+ 11  NETAPP__  VD-1000MB-FZ____  1,048,576,000  1,070,071,808   Yes  512  15000
+ 12  NETAPP__  VD-16MB-520_____     16,777,216     38,273,024   No   520  10000
+ 13  NETAPP__  VD-35MB-520_____     35,913,728     57,409,536   No   520  10000
+ 14  NETAPP__  VD-50MB-520_____     52,428,800     73,924,608   No   520  10000
+ 15  NETAPP__  VD-100MB-520____    104,857,600    126,353,408   No   520  10000
+ 16  NETAPP__  VD-500MB-520____    524,288,000    545,783,808   No   520  10000
+ 17  NETAPP__  VD-1000MB-520___  1,048,576,000  1,070,071,808   No   520  10000
+ 18  NETAPP__  VD-16MB-FZ-520__     16,777,216     38,273,024   Yes  520  15000
+ 19  NETAPP__  VD-35MB-FZ-520__     35,913,728     57,409,536   Yes  520  15000
+ 20  NETAPP__  VD-50MB-FZ-520__     52,428,800     73,924,608   Yes  520  15000
+ 21  NETAPP__  VD-100MB-FZ-520_    104,857,600    126,353,408   Yes  520  15000
+ 22  NETAPP__  VD-500MB-FZ-520_    524,288,000    545,783,808   Yes  520  15000
+ 23  NETAPP__  VD-1000MB-FZ-520  1,048,576,000  1,070,071,808   Yes  520  15000
+ 24  NETAPP__  VD-16MB-FZ-ATA__     16,777,216     51,388,416   Yes  512   7200
+ 25  NETAPP__  VD-35MB-FZ-ATA__     36,700,160     73,801,728   Yes  512   7200
+ 26  NETAPP__  VD-50MB-FZ-ATA__     52,428,800     91,496,448   Yes  512   7200
+ 27  NETAPP__  VD-100MB-FZ-ATA_    104,857,600    150,478,848   Yes  512   7200
+ 28  NETAPP__  VD-500MB-FZ-ATA_    524,288,000    622,338,048   Yes  512   7200
+ 29  NETAPP__  VD-1000MB-FZ-ATA  1,048,576,000  1,212,162,048   Yes  512   7200
+ 30  NETAPP__  VD-2000MB-FZ-520  2,097,512,000  2,119,007,808   Yes  520  15000
+ 31  NETAPP__  VD-4000MB-FZ-520  4,194,304,000  4,215,799,808   Yes  520  15000
+ 32  NETAPP__  VD-2000MB-FZ-ATA  2,097,512,000  2,391,810,048   Yes  512   7200
+ 33  NETAPP__  VD-4000MB-FZ-ATA  4,194,304,000  4,751,106,048   Yes  512   7200
+ 34  NETAPP__  VD-100MB-SS-512_    104,857,600    126,353,408   Yes  512  15000
+ 35  NETAPP__  VD-500MB-SS-520_    524,288,000    545,783,808   Yes  520  15000
+ 36  NETAPP__  VD-9000MB-FZ-520  9,437,184,000  9,458,679,808   Yes  520  15000
+ 37  NETAPP__  VD-9000MB-FZ-ATA  9,437,184,000 10,649,346,048   Yes  512   7200
+ 38  NETAPP__  ZN-3500MB-SS-520  3,758,096,384  3,779,592,192   Yes  520  15000
+c1-01% vsim_makedisks
+,pulled/                                           v1.22:NETAPP__:VD-9000MB-FZ-ATA:11162606:20799504
+,reservations*                                     v1.24:NETAPP__:VD-9000MB-FZ-ATA:11162607:20799504
+Shelf:DiskShelf14                                  v1.25:NETAPP__:VD-9000MB-FZ-ATA:11162608:20799504
+v0.16:NETAPP__:VD-9000MB-FZ-ATA:98861500:20799504  v1.26:NETAPP__:VD-9000MB-FZ-ATA:11162609:20799504
+v0.17:NETAPP__:VD-9000MB-FZ-ATA:98861501:20799504  v1.27:NETAPP__:VD-9000MB-FZ-ATA:11162610:20799504
+v0.18:NETAPP__:VD-9000MB-FZ-ATA:98861502:20799504  v1.28:NETAPP__:VD-9000MB-FZ-ATA:11162611:20799504
+v0.19:NETAPP__:VD-9000MB-FZ-ATA:98861503:20799504  v1.29:NETAPP__:VD-9000MB-FZ-ATA:11162612:20799504
+v0.20:NETAPP__:VD-9000MB-FZ-ATA:98861504:20799504  v1.32:NETAPP__:VD-9000MB-FZ-ATA:11162613:20799504
+v0.21:NETAPP__:VD-9000MB-FZ-ATA:98861505:20799504  v2.16:NETAPP__:VD-9000MB-FZ-ATA:13553400:20799504
+v0.22:NETAPP__:VD-9000MB-FZ-ATA:98861506:20799504  v2.17:NETAPP__:VD-9000MB-FZ-ATA:13553401:20799504
+v0.24:NETAPP__:VD-9000MB-FZ-ATA:98861507:20799504  v2.18:NETAPP__:VD-9000MB-FZ-ATA:13553402:20799504
+v0.25:NETAPP__:VD-9000MB-FZ-ATA:98861508:20799504  v2.19:NETAPP__:VD-9000MB-FZ-ATA:13553403:20799504
+v0.26:NETAPP__:VD-9000MB-FZ-ATA:98861509:20799504  v2.20:NETAPP__:VD-9000MB-FZ-ATA:13553404:20799504
+v0.27:NETAPP__:VD-9000MB-FZ-ATA:98861510:20799504  v2.21:NETAPP__:VD-9000MB-FZ-ATA:13553405:20799504
+v0.28:NETAPP__:VD-9000MB-FZ-ATA:98861511:20799504  v2.22:NETAPP__:VD-9000MB-FZ-ATA:13553406:20799504
+v0.29:NETAPP__:VD-9000MB-FZ-ATA:98861512:20799504  v2.24:NETAPP__:VD-9000MB-FZ-ATA:13553407:20799504
+v0.32:NETAPP__:VD-9000MB-FZ-ATA:98861513:20799504  v2.25:NETAPP__:VD-9000MB-FZ-ATA:13553408:20799504
+v1.16:NETAPP__:VD-9000MB-FZ-ATA:11162600:20799504  v2.26:NETAPP__:VD-9000MB-FZ-ATA:13553409:20799504
+v1.17:NETAPP__:VD-9000MB-FZ-ATA:11162601:20799504  v2.27:NETAPP__:VD-9000MB-FZ-ATA:13553410:20799504
+v1.18:NETAPP__:VD-9000MB-FZ-ATA:11162602:20799504  v2.28:NETAPP__:VD-9000MB-FZ-ATA:13553411:20799504
+v1.19:NETAPP__:VD-9000MB-FZ-ATA:11162603:20799504  v2.29:NETAPP__:VD-9000MB-FZ-ATA:13553412:20799504
+v1.20:NETAPP__:VD-9000MB-FZ-ATA:11162604:20799504  v2.32:NETAPP__:VD-9000MB-FZ-ATA:13553413:20799504
+v1.21:NETAPP__:VD-9000MB-FZ-ATA:11162605:20799504
+c1-01% vsim_makedisks -n 14 -t 35 -a 3
+/usr/sbin/vsim_makedisks: Cannot open directory ,disks
+c1-01% ll
+total 4181744
+drwxr-xr-x  2 root  wheel         1024 Apr 13 14:34 ,pulled/
+-rwxr-xr-x  1 root  wheel          912 Apr 13 14:34 ,reservations*
+-rw-r--r--  1 root  wheel         4144 Apr 13 11:31 Shelf:DiskShelf14
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 12:12 v0.16:NETAPP__:VD-9000MB-FZ-ATA:98861500:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:39 v0.17:NETAPP__:VD-9000MB-FZ-ATA:98861501:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:39 v0.18:NETAPP__:VD-9000MB-FZ-ATA:98861502:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.19:NETAPP__:VD-9000MB-FZ-ATA:98861503:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.20:NETAPP__:VD-9000MB-FZ-ATA:98861504:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.21:NETAPP__:VD-9000MB-FZ-ATA:98861505:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.22:NETAPP__:VD-9000MB-FZ-ATA:98861506:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.24:NETAPP__:VD-9000MB-FZ-ATA:98861507:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.25:NETAPP__:VD-9000MB-FZ-ATA:98861508:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.26:NETAPP__:VD-9000MB-FZ-ATA:98861509:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.27:NETAPP__:VD-9000MB-FZ-ATA:98861510:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.28:NETAPP__:VD-9000MB-FZ-ATA:98861511:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.29:NETAPP__:VD-9000MB-FZ-ATA:98861512:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.32:NETAPP__:VD-9000MB-FZ-ATA:98861513:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:32 v1.16:NETAPP__:VD-9000MB-FZ-ATA:11162600:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.17:NETAPP__:VD-9000MB-FZ-ATA:11162601:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.18:NETAPP__:VD-9000MB-FZ-ATA:11162602:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.19:NETAPP__:VD-9000MB-FZ-ATA:11162603:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.20:NETAPP__:VD-9000MB-FZ-ATA:11162604:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.21:NETAPP__:VD-9000MB-FZ-ATA:11162605:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.22:NETAPP__:VD-9000MB-FZ-ATA:11162606:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.24:NETAPP__:VD-9000MB-FZ-ATA:11162607:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.25:NETAPP__:VD-9000MB-FZ-ATA:11162608:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.26:NETAPP__:VD-9000MB-FZ-ATA:11162609:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.27:NETAPP__:VD-9000MB-FZ-ATA:11162610:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.28:NETAPP__:VD-9000MB-FZ-ATA:11162611:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.29:NETAPP__:VD-9000MB-FZ-ATA:11162612:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.32:NETAPP__:VD-9000MB-FZ-ATA:11162613:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.16:NETAPP__:VD-9000MB-FZ-ATA:13553400:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.17:NETAPP__:VD-9000MB-FZ-ATA:13553401:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.18:NETAPP__:VD-9000MB-FZ-ATA:13553402:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.19:NETAPP__:VD-9000MB-FZ-ATA:13553403:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.20:NETAPP__:VD-9000MB-FZ-ATA:13553404:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.21:NETAPP__:VD-9000MB-FZ-ATA:13553405:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.22:NETAPP__:VD-9000MB-FZ-ATA:13553406:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.24:NETAPP__:VD-9000MB-FZ-ATA:13553407:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.25:NETAPP__:VD-9000MB-FZ-ATA:13553408:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.26:NETAPP__:VD-9000MB-FZ-ATA:13553409:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.27:NETAPP__:VD-9000MB-FZ-ATA:13553410:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.28:NETAPP__:VD-9000MB-FZ-ATA:13553411:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.29:NETAPP__:VD-9000MB-FZ-ATA:13553412:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.32:NETAPP__:VD-9000MB-FZ-ATA:13553413:20799504
+c1-01% cd ..
+c1-01% vsim_makedisks -n 14 -t 35 -a 3
+touch: ,disks/v3.16:NETAPP__:VD-500MB-SS-520_:33485300:1080448: Permission denied
+chmod: ,disks/v3.16:NETAPP__:VD-500MB-SS-520_:33485300:1080448: No such file or directory
+open ,disks/v3.16:NETAPP__:VD-500MB-SS-520_:33485300:1080448: No such file or directory
+Creating ,disks/v3.16:NETAPP__:VD-500MB-SS-520_:33485300:1080448
+/usr/sbin/vsim_makedisks: cannot create ,disks/Shelf:DiskShelf14: Permission denied
+touch: ,disks/v3.17:NETAPP__:VD-500MB-SS-520_:33485301:1080448: Permission denied
+chmod: ,disks/v3.17:NETAPP__:VD-500MB-SS-520_:33485301:1080448: No such file or directory
+open ,disks/v3.17:NETAPP__:VD-500MB-SS-520_:33485301:1080448: No such file or directory
+Creating ,disks/v3.17:NETAPP__:VD-500MB-SS-520_:33485301:1080448
+/usr/sbin/vsim_makedisks: cannot create ,disks/Shelf:DiskShelf14: Permission denied
+touch: ,disks/v3.18:NETAPP__:VD-500MB-SS-520_:33485302:1080448: Permission denied
+chmod: ,disks/v3.18:NETAPP__:VD-500MB-SS-520_:33485302:1080448: No such file or directory
+open ,disks/v3.18:NETAPP__:VD-500MB-SS-520_:33485302:1080448: No such file or directory
+Creating ,disks/v3.18:NETAPP__:VD-500MB-SS-520_:33485302:1080448
+/usr/sbin/vsim_makedisks: cannot create ,disks/Shelf:DiskShelf14: Permission denied
+touch: ,disks/v3.19:NETAPP__:VD-500MB-SS-520_:33485303:1080448: Permission denied
+chmod: ,disks/v3.19:NETAPP__:VD-500MB-SS-520_:33485303:1080448: No such file or directory
+open ,disks/v3.19:NETAPP__:VD-500MB-SS-520_:33485303:1080448: No such file or directory
+Creating ,disks/v3.19:NETAPP__:VD-500MB-SS-520_:33485303:1080448
+/usr/sbin/vsim_makedisks: cannot create ,disks/Shelf:DiskShelf14: Permission denied
+touch: ,disks/v3.20:NETAPP__:VD-500MB-SS-520_:33485304:1080448: Permission denied
+chmod: ,disks/v3.20:NETAPP__:VD-500MB-SS-520_:33485304:1080448: No such file or directory
+open ,disks/v3.20:NETAPP__:VD-500MB-SS-520_:33485304:1080448: No such file or directory
+Creating ,disks/v3.20:NETAPP__:VD-500MB-SS-520_:33485304:1080448
+/usr/sbin/vsim_makedisks: cannot create ,disks/Shelf:DiskShelf14: Permission denied
+touch: ,disks/v3.21:NETAPP__:VD-500MB-SS-520_:33485305:1080448: Permission denied
+chmod: ,disks/v3.21:NETAPP__:VD-500MB-SS-520_:33485305:1080448: No such file or directory
+open ,disks/v3.21:NETAPP__:VD-500MB-SS-520_:33485305:1080448: No such file or directory
+Creating ,disks/v3.21:NETAPP__:VD-500MB-SS-520_:33485305:1080448
+/usr/sbin/vsim_makedisks: cannot create ,disks/Shelf:DiskShelf14: Permission denied
+touch: ,disks/v3.22:NETAPP__:VD-500MB-SS-520_:33485306:1080448: Permission denied
+chmod: ,disks/v3.22:NETAPP__:VD-500MB-SS-520_:33485306:1080448: No such file or directory
+open ,disks/v3.22:NETAPP__:VD-500MB-SS-520_:33485306:1080448: No such file or directory
+Creating ,disks/v3.22:NETAPP__:VD-500MB-SS-520_:33485306:1080448
+/usr/sbin/vsim_makedisks: cannot create ,disks/Shelf:DiskShelf14: Permission denied
+touch: ,disks/v3.24:NETAPP__:VD-500MB-SS-520_:33485307:1080448: Permission denied
+chmod: ,disks/v3.24:NETAPP__:VD-500MB-SS-520_:33485307:1080448: No such file or directory
+open ,disks/v3.24:NETAPP__:VD-500MB-SS-520_:33485307:1080448: No such file or directory
+Creating ,disks/v3.24:NETAPP__:VD-500MB-SS-520_:33485307:1080448
+/usr/sbin/vsim_makedisks: cannot create ,disks/Shelf:DiskShelf14: Permission denied
+touch: ,disks/v3.25:NETAPP__:VD-500MB-SS-520_:33485308:1080448: Permission denied
+chmod: ,disks/v3.25:NETAPP__:VD-500MB-SS-520_:33485308:1080448: No such file or directory
+open ,disks/v3.25:NETAPP__:VD-500MB-SS-520_:33485308:1080448: No such file or directory
+Creating ,disks/v3.25:NETAPP__:VD-500MB-SS-520_:33485308:1080448
+/usr/sbin/vsim_makedisks: cannot create ,disks/Shelf:DiskShelf14: Permission denied
+touch: ,disks/v3.26:NETAPP__:VD-500MB-SS-520_:33485309:1080448: Permission denied
+chmod: ,disks/v3.26:NETAPP__:VD-500MB-SS-520_:33485309:1080448: No such file or directory
+open ,disks/v3.26:NETAPP__:VD-500MB-SS-520_:33485309:1080448: No such file or directory
+Creating ,disks/v3.26:NETAPP__:VD-500MB-SS-520_:33485309:1080448
+/usr/sbin/vsim_makedisks: cannot create ,disks/Shelf:DiskShelf14: Permission denied
+touch: ,disks/v3.27:NETAPP__:VD-500MB-SS-520_:33485310:1080448: Permission denied
+chmod: ,disks/v3.27:NETAPP__:VD-500MB-SS-520_:33485310:1080448: No such file or directory
+open ,disks/v3.27:NETAPP__:VD-500MB-SS-520_:33485310:1080448: No such file or directory
+Creating ,disks/v3.27:NETAPP__:VD-500MB-SS-520_:33485310:1080448
+/usr/sbin/vsim_makedisks: cannot create ,disks/Shelf:DiskShelf14: Permission denied
+touch: ,disks/v3.28:NETAPP__:VD-500MB-SS-520_:33485311:1080448: Permission denied
+chmod: ,disks/v3.28:NETAPP__:VD-500MB-SS-520_:33485311:1080448: No such file or directory
+open ,disks/v3.28:NETAPP__:VD-500MB-SS-520_:33485311:1080448: No such file or directory
+Creating ,disks/v3.28:NETAPP__:VD-500MB-SS-520_:33485311:1080448
+/usr/sbin/vsim_makedisks: cannot create ,disks/Shelf:DiskShelf14: Permission denied
+touch: ,disks/v3.29:NETAPP__:VD-500MB-SS-520_:33485312:1080448: Permission denied
+chmod: ,disks/v3.29:NETAPP__:VD-500MB-SS-520_:33485312:1080448: No such file or directory
+open ,disks/v3.29:NETAPP__:VD-500MB-SS-520_:33485312:1080448: No such file or directory
+Creating ,disks/v3.29:NETAPP__:VD-500MB-SS-520_:33485312:1080448
+/usr/sbin/vsim_makedisks: cannot create ,disks/Shelf:DiskShelf14: Permission denied
+touch: ,disks/v3.32:NETAPP__:VD-500MB-SS-520_:33485313:1080448: Permission denied
+chmod: ,disks/v3.32:NETAPP__:VD-500MB-SS-520_:33485313:1080448: No such file or directory
+open ,disks/v3.32:NETAPP__:VD-500MB-SS-520_:33485313:1080448: No such file or directory
+Creating ,disks/v3.32:NETAPP__:VD-500MB-SS-520_:33485313:1080448
+/usr/sbin/vsim_makedisks: cannot create ,disks/Shelf:DiskShelf14: Permission denied
+Shelf file Shelf:DiskShelf14 updated
+c1-01% sudo vsim_makedisks -n 14 -t 35 -a 3
+Creating ,disks/v3.16:NETAPP__:VD-500MB-SS-520_:37391200:1080448
+Creating ,disks/v3.17:NETAPP__:VD-500MB-SS-520_:37391201:1080448
+Creating ,disks/v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448
+Creating ,disks/v3.19:NETAPP__:VD-500MB-SS-520_:37391203:1080448
+Creating ,disks/v3.20:NETAPP__:VD-500MB-SS-520_:37391204:1080448
+Creating ,disks/v3.21:NETAPP__:VD-500MB-SS-520_:37391205:1080448
+Creating ,disks/v3.22:NETAPP__:VD-500MB-SS-520_:37391206:1080448
+Creating ,disks/v3.24:NETAPP__:VD-500MB-SS-520_:37391207:1080448
+Creating ,disks/v3.25:NETAPP__:VD-500MB-SS-520_:37391208:1080448
+Creating ,disks/v3.26:NETAPP__:VD-500MB-SS-520_:37391209:1080448
+Creating ,disks/v3.27:NETAPP__:VD-500MB-SS-520_:37391210:1080448
+Creating ,disks/v3.28:NETAPP__:VD-500MB-SS-520_:37391211:1080448
+Creating ,disks/v3.29:NETAPP__:VD-500MB-SS-520_:37391212:1080448
+Creating ,disks/v3.32:NETAPP__:VD-500MB-SS-520_:37391213:1080448
+Shelf file Shelf:DiskShelf14 updated
+c1-01% exit
+logout
+
+c1::*> node run
+Type 'exit' or 'Ctrl-D' to return to the CLI
+c1-01> priv set diag
+Warning: These diagnostic commands are for use by NetApp
+         personnel only.
+c1-01*> disk return
+disk: Did not recognize option "return".
+usage: disk <options>
+Options are:
+        assign {<disk_name> | all | [-T <storage type> | -shelf <shelf name>] [-n <count>] | auto} [-p <pool>] {[-o <ownername>] [-s <sysid>] | [-copy-ownership-from <disk-name>]} [-c block|advanced_zoned] [-f] - assign a disk to a filer or all unowned disks by specifying "all"  or <count> number of unowned disks
+        ddr_label {repair | print | delete | dumpraw | rm_qualtable | modify [-c] -o <offset> -v <value> | start_scan | pause_scan | resume_scan | error_scan | rediscover | reinit } [-f] [-d all | <disk_list>]
+        dumpevents { sanown | config_checker | raid } - Dumps the sanown/config-checker/raid event queue since boot
+        dump_telemetry_log <disk_name> - retrieves NVMe host-initiated telemetry log and writes to file
+        encrypt { destroy | lock | rekey | rekey_fips | revert_original | sanitize | show | show_fips } - perform tasks specific to self-encrypting disks
+        fail [-i] [-f] <disk_name>  - fail a file system disk
+        maint { start | abort | status | list} - run maintenance tests on one or more disks
+        partition { { -n { 2 | 3 } [-u <pool_uuid>] } | { -n <num_parts> -u <pool_uuid> } } [-i <part_idx> -b <raw_blks>].. <disk_name> - partition a disk
+        power_cycle [ -f ] { [-d <disk_list>] | [ -c <channel_name> [ -s <shelf_number> ] ] } - power-cycle one or more disks
+        reassign {-s <old_sysid>} [-d <new_sysid>] [-p <partner_sysid>] [-r <dr-partner-sysid> ] - reassign disks from old filer
+        remove [-w] <disk_name>     - remove a spare disk
+        remove_ownership [<disk_name> | all | -s <sysid>] [-f] - revert/remove disk ownership
+        replace {start [-f] [-m] <disk_name> <spare_disk_name>} | {stop <disk_name>} - replace a file system disk with a spare disk or stop replacing
+        sanitize { start | abort | status | release } - sanitize one or more disks
+        sanown_stats {start| stop| show }- collect sanown event stats
+        scrub  { start | stop }     - start or stop disk scrubbing
+        shm_stats [<disk_name> | asup | clear_errors]     - Storage Health Monitor statistics for a disk
+        show [-o <ownername> | -s <sysid> | -n | -v | -a | -m | -w | -S <disk_serialno> | -c <cluster_disk_name> ]  - lists disks and owners
+        simpull <disk_name1> [<disk_name2> [<disk_name3> ... ]]  - simulate one or more disk pulls
+        simpush [<sim_disk_path_name1> [<sim_disk_path_name2> [<sim_disk_path_name3> ...]] | -l] - simulate one or more disk pushes or list available disks to push
+        unfail [-s] <disk_name>     - unfail a disk  (-s  not valid in maintenance mode)
+        unpartition {<disk_name> | all} - unpartition a partitioned disk or unpartition all the partitioned disks
+        zero spares - Zero all spare disks
+c1-01*> disk simpush -l
+
+
+The following pulled disks are available for pushing:
+         v3.16:NETAPP__:ZN-3500MB-SS-520:17512100:973952
+         v3.18:NETAPP__:ZN-3500MB-SS-520:17512102:973952
+         v3.17:NETAPP__:ZN-3500MB-SS-520:17512101:973952
+         v3.19:NETAPP__:ZN-3500MB-SS-520:17512103:973952
+         v3.20:NETAPP__:ZN-3500MB-SS-520:17512104:973952
+         v3.21:NETAPP__:ZN-3500MB-SS-520:17512105:973952
+         v3.22:NETAPP__:ZN-3500MB-SS-520:17512106:973952
+         v3.24:NETAPP__:ZN-3500MB-SS-520:17512107:973952
+         v3.25:NETAPP__:ZN-3500MB-SS-520:17512108:973952
+         v3.26:NETAPP__:ZN-3500MB-SS-520:17512109:973952
+         v3.27:NETAPP__:ZN-3500MB-SS-520:17512110:973952
+         v3.28:NETAPP__:ZN-3500MB-SS-520:17512111:973952
+         v3.29:NETAPP__:ZN-3500MB-SS-520:17512112:973952
+         v3.32:NETAPP__:ZN-3500MB-SS-520:17512113:973952
+c1-01*> priv set diag
+c1-01*> exit
+logout
+
+c1::*> set diagnostic
+
+c1::*> systemshell
+  (system node systemshell)
+diag@127.0.0.1's password:
+
+Warning:  The system shell provides access to low-level
+diagnostic tools that can cause irreparable damage to
+the system if not used properly.  Use this environment
+only when directed to do so by support personnel.
+
+c1-01% cd /sim/dev
+c1-01% ll
+total 8
+drwxr-xr-x  3 root  wheel  4096 Apr 13 14:40 ,disks/
+drwxr-xr-x  2 root  wheel   512 Apr 13 10:52 ,tapes/
+c1-01% cd ,disks/
+c1-01% ll
+total 4269520
+drwxr-xr-x  2 root  wheel         1024 Apr 13 14:34 ,pulled/
+-rwxr-xr-x  1 root  wheel          912 Apr 13 14:34 ,reservations*
+-rw-r--r--  1 root  wheel         4830 Apr 13 14:40 Shelf:DiskShelf14
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 12:12 v0.16:NETAPP__:VD-9000MB-FZ-ATA:98861500:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:44 v0.17:NETAPP__:VD-9000MB-FZ-ATA:98861501:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:44 v0.18:NETAPP__:VD-9000MB-FZ-ATA:98861502:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.19:NETAPP__:VD-9000MB-FZ-ATA:98861503:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.20:NETAPP__:VD-9000MB-FZ-ATA:98861504:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.21:NETAPP__:VD-9000MB-FZ-ATA:98861505:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.22:NETAPP__:VD-9000MB-FZ-ATA:98861506:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.24:NETAPP__:VD-9000MB-FZ-ATA:98861507:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.25:NETAPP__:VD-9000MB-FZ-ATA:98861508:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.26:NETAPP__:VD-9000MB-FZ-ATA:98861509:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.27:NETAPP__:VD-9000MB-FZ-ATA:98861510:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.28:NETAPP__:VD-9000MB-FZ-ATA:98861511:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.29:NETAPP__:VD-9000MB-FZ-ATA:98861512:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.32:NETAPP__:VD-9000MB-FZ-ATA:98861513:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:32 v1.16:NETAPP__:VD-9000MB-FZ-ATA:11162600:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.17:NETAPP__:VD-9000MB-FZ-ATA:11162601:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.18:NETAPP__:VD-9000MB-FZ-ATA:11162602:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.19:NETAPP__:VD-9000MB-FZ-ATA:11162603:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.20:NETAPP__:VD-9000MB-FZ-ATA:11162604:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.21:NETAPP__:VD-9000MB-FZ-ATA:11162605:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.22:NETAPP__:VD-9000MB-FZ-ATA:11162606:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.24:NETAPP__:VD-9000MB-FZ-ATA:11162607:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.25:NETAPP__:VD-9000MB-FZ-ATA:11162608:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.26:NETAPP__:VD-9000MB-FZ-ATA:11162609:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.27:NETAPP__:VD-9000MB-FZ-ATA:11162610:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.28:NETAPP__:VD-9000MB-FZ-ATA:11162611:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.29:NETAPP__:VD-9000MB-FZ-ATA:11162612:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.32:NETAPP__:VD-9000MB-FZ-ATA:11162613:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.16:NETAPP__:VD-9000MB-FZ-ATA:13553400:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.17:NETAPP__:VD-9000MB-FZ-ATA:13553401:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.18:NETAPP__:VD-9000MB-FZ-ATA:13553402:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.19:NETAPP__:VD-9000MB-FZ-ATA:13553403:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.20:NETAPP__:VD-9000MB-FZ-ATA:13553404:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.21:NETAPP__:VD-9000MB-FZ-ATA:13553405:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.22:NETAPP__:VD-9000MB-FZ-ATA:13553406:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.24:NETAPP__:VD-9000MB-FZ-ATA:13553407:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.25:NETAPP__:VD-9000MB-FZ-ATA:13553408:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.26:NETAPP__:VD-9000MB-FZ-ATA:13553409:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.27:NETAPP__:VD-9000MB-FZ-ATA:13553410:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.28:NETAPP__:VD-9000MB-FZ-ATA:13553411:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.29:NETAPP__:VD-9000MB-FZ-ATA:13553412:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.32:NETAPP__:VD-9000MB-FZ-ATA:13553413:20799504
+-rw-r--r--  1 root  wheel        12416 Apr 13 14:40 v3.16:NETAPP__:VD-500MB-SS-520_:37391200:1080448
+-rw-r--r--  1 root  wheel        12416 Apr 13 14:40 v3.17:NETAPP__:VD-500MB-SS-520_:37391201:1080448
+-rw-r--r--  1 root  wheel        12416 Apr 13 14:40 v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448
+-rw-r--r--  1 root  wheel        12416 Apr 13 14:40 v3.19:NETAPP__:VD-500MB-SS-520_:37391203:1080448
+-rw-r--r--  1 root  wheel        12416 Apr 13 14:40 v3.20:NETAPP__:VD-500MB-SS-520_:37391204:1080448
+-rw-r--r--  1 root  wheel        12416 Apr 13 14:40 v3.21:NETAPP__:VD-500MB-SS-520_:37391205:1080448
+-rw-r--r--  1 root  wheel        12416 Apr 13 14:40 v3.22:NETAPP__:VD-500MB-SS-520_:37391206:1080448
+-rw-r--r--  1 root  wheel        12416 Apr 13 14:40 v3.24:NETAPP__:VD-500MB-SS-520_:37391207:1080448
+-rw-r--r--  1 root  wheel        12416 Apr 13 14:40 v3.25:NETAPP__:VD-500MB-SS-520_:37391208:1080448
+-rw-r--r--  1 root  wheel        12416 Apr 13 14:40 v3.26:NETAPP__:VD-500MB-SS-520_:37391209:1080448
+-rw-r--r--  1 root  wheel        12416 Apr 13 14:40 v3.27:NETAPP__:VD-500MB-SS-520_:37391210:1080448
+-rw-r--r--  1 root  wheel        12416 Apr 13 14:40 v3.28:NETAPP__:VD-500MB-SS-520_:37391211:1080448
+-rw-r--r--  1 root  wheel        12416 Apr 13 14:40 v3.29:NETAPP__:VD-500MB-SS-520_:37391212:1080448
+-rw-r--r--  1 root  wheel        12416 Apr 13 14:40 v3.32:NETAPP__:VD-500MB-SS-520_:37391213:1080448
+c1-01% mv ./v
+v0.16:NETAPP__:VD-9000MB-FZ-ATA:98861500:20799504  v2.16:NETAPP__:VD-9000MB-FZ-ATA:13553400:20799504
+v0.17:NETAPP__:VD-9000MB-FZ-ATA:98861501:20799504  v2.17:NETAPP__:VD-9000MB-FZ-ATA:13553401:20799504
+v0.18:NETAPP__:VD-9000MB-FZ-ATA:98861502:20799504  v2.18:NETAPP__:VD-9000MB-FZ-ATA:13553402:20799504
+v0.19:NETAPP__:VD-9000MB-FZ-ATA:98861503:20799504  v2.19:NETAPP__:VD-9000MB-FZ-ATA:13553403:20799504
+v0.20:NETAPP__:VD-9000MB-FZ-ATA:98861504:20799504  v2.20:NETAPP__:VD-9000MB-FZ-ATA:13553404:20799504
+v0.21:NETAPP__:VD-9000MB-FZ-ATA:98861505:20799504  v2.21:NETAPP__:VD-9000MB-FZ-ATA:13553405:20799504
+v0.22:NETAPP__:VD-9000MB-FZ-ATA:98861506:20799504  v2.22:NETAPP__:VD-9000MB-FZ-ATA:13553406:20799504
+v0.24:NETAPP__:VD-9000MB-FZ-ATA:98861507:20799504  v2.24:NETAPP__:VD-9000MB-FZ-ATA:13553407:20799504
+v0.25:NETAPP__:VD-9000MB-FZ-ATA:98861508:20799504  v2.25:NETAPP__:VD-9000MB-FZ-ATA:13553408:20799504
+v0.26:NETAPP__:VD-9000MB-FZ-ATA:98861509:20799504  v2.26:NETAPP__:VD-9000MB-FZ-ATA:13553409:20799504
+v0.27:NETAPP__:VD-9000MB-FZ-ATA:98861510:20799504  v2.27:NETAPP__:VD-9000MB-FZ-ATA:13553410:20799504
+v0.28:NETAPP__:VD-9000MB-FZ-ATA:98861511:20799504  v2.28:NETAPP__:VD-9000MB-FZ-ATA:13553411:20799504
+v0.29:NETAPP__:VD-9000MB-FZ-ATA:98861512:20799504  v2.29:NETAPP__:VD-9000MB-FZ-ATA:13553412:20799504
+v0.32:NETAPP__:VD-9000MB-FZ-ATA:98861513:20799504  v2.32:NETAPP__:VD-9000MB-FZ-ATA:13553413:20799504
+v1.16:NETAPP__:VD-9000MB-FZ-ATA:11162600:20799504  v3.16:NETAPP__:VD-500MB-SS-520_:37391200:1080448
+v1.17:NETAPP__:VD-9000MB-FZ-ATA:11162601:20799504  v3.17:NETAPP__:VD-500MB-SS-520_:37391201:1080448
+v1.18:NETAPP__:VD-9000MB-FZ-ATA:11162602:20799504  v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448
+v1.19:NETAPP__:VD-9000MB-FZ-ATA:11162603:20799504  v3.19:NETAPP__:VD-500MB-SS-520_:37391203:1080448
+v1.20:NETAPP__:VD-9000MB-FZ-ATA:11162604:20799504  v3.20:NETAPP__:VD-500MB-SS-520_:37391204:1080448
+v1.21:NETAPP__:VD-9000MB-FZ-ATA:11162605:20799504  v3.21:NETAPP__:VD-500MB-SS-520_:37391205:1080448
+v1.22:NETAPP__:VD-9000MB-FZ-ATA:11162606:20799504  v3.22:NETAPP__:VD-500MB-SS-520_:37391206:1080448
+v1.24:NETAPP__:VD-9000MB-FZ-ATA:11162607:20799504  v3.24:NETAPP__:VD-500MB-SS-520_:37391207:1080448
+v1.25:NETAPP__:VD-9000MB-FZ-ATA:11162608:20799504  v3.25:NETAPP__:VD-500MB-SS-520_:37391208:1080448
+v1.26:NETAPP__:VD-9000MB-FZ-ATA:11162609:20799504  v3.26:NETAPP__:VD-500MB-SS-520_:37391209:1080448
+v1.27:NETAPP__:VD-9000MB-FZ-ATA:11162610:20799504  v3.27:NETAPP__:VD-500MB-SS-520_:37391210:1080448
+v1.28:NETAPP__:VD-9000MB-FZ-ATA:11162611:20799504  v3.28:NETAPP__:VD-500MB-SS-520_:37391211:1080448
+v1.29:NETAPP__:VD-9000MB-FZ-ATA:11162612:20799504  v3.29:NETAPP__:VD-500MB-SS-520_:37391212:1080448
+v1.32:NETAPP__:VD-9000MB-FZ-ATA:11162613:20799504  v3.32:NETAPP__:VD-500MB-SS-520_:37391213:1080448
+c1-01% mv ./v3.* ,pulled/
+mv: rename ./v3.16:NETAPP__:VD-500MB-SS-520_:37391200:1080448 to ,pulled/v3.16:NETAPP__:VD-500MB-SS-520_:37391200:1080448: Permission denied
+mv: rename ./v3.17:NETAPP__:VD-500MB-SS-520_:37391201:1080448 to ,pulled/v3.17:NETAPP__:VD-500MB-SS-520_:37391201:1080448: Permission denied
+mv: rename ./v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448 to ,pulled/v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448: Permission denied
+mv: rename ./v3.19:NETAPP__:VD-500MB-SS-520_:37391203:1080448 to ,pulled/v3.19:NETAPP__:VD-500MB-SS-520_:37391203:1080448: Permission denied
+mv: rename ./v3.20:NETAPP__:VD-500MB-SS-520_:37391204:1080448 to ,pulled/v3.20:NETAPP__:VD-500MB-SS-520_:37391204:1080448: Permission denied
+mv: rename ./v3.21:NETAPP__:VD-500MB-SS-520_:37391205:1080448 to ,pulled/v3.21:NETAPP__:VD-500MB-SS-520_:37391205:1080448: Permission denied
+mv: rename ./v3.22:NETAPP__:VD-500MB-SS-520_:37391206:1080448 to ,pulled/v3.22:NETAPP__:VD-500MB-SS-520_:37391206:1080448: Permission denied
+mv: rename ./v3.24:NETAPP__:VD-500MB-SS-520_:37391207:1080448 to ,pulled/v3.24:NETAPP__:VD-500MB-SS-520_:37391207:1080448: Permission denied
+mv: rename ./v3.25:NETAPP__:VD-500MB-SS-520_:37391208:1080448 to ,pulled/v3.25:NETAPP__:VD-500MB-SS-520_:37391208:1080448: Permission denied
+mv: rename ./v3.26:NETAPP__:VD-500MB-SS-520_:37391209:1080448 to ,pulled/v3.26:NETAPP__:VD-500MB-SS-520_:37391209:1080448: Permission denied
+mv: rename ./v3.27:NETAPP__:VD-500MB-SS-520_:37391210:1080448 to ,pulled/v3.27:NETAPP__:VD-500MB-SS-520_:37391210:1080448: Permission denied
+mv: rename ./v3.28:NETAPP__:VD-500MB-SS-520_:37391211:1080448 to ,pulled/v3.28:NETAPP__:VD-500MB-SS-520_:37391211:1080448: Permission denied
+mv: rename ./v3.29:NETAPP__:VD-500MB-SS-520_:37391212:1080448 to ,pulled/v3.29:NETAPP__:VD-500MB-SS-520_:37391212:1080448: Permission denied
+mv: rename ./v3.32:NETAPP__:VD-500MB-SS-520_:37391213:1080448 to ,pulled/v3.32:NETAPP__:VD-500MB-SS-520_:37391213:1080448: Permission denied
+c1-01% sudo mv ./v3.* ,pulled/
+c1-01% ll
+total 4281008
+drwxr-xr-x  2 root  wheel         2048 Apr 13 14:45 ,pulled/
+-rwxr-xr-x  1 root  wheel          912 Apr 13 14:34 ,reservations*
+-rw-r--r--  1 root  wheel         4830 Apr 13 14:40 Shelf:DiskShelf14
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 12:12 v0.16:NETAPP__:VD-9000MB-FZ-ATA:98861500:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:45 v0.17:NETAPP__:VD-9000MB-FZ-ATA:98861501:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:45 v0.18:NETAPP__:VD-9000MB-FZ-ATA:98861502:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.19:NETAPP__:VD-9000MB-FZ-ATA:98861503:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.20:NETAPP__:VD-9000MB-FZ-ATA:98861504:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.21:NETAPP__:VD-9000MB-FZ-ATA:98861505:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.22:NETAPP__:VD-9000MB-FZ-ATA:98861506:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.24:NETAPP__:VD-9000MB-FZ-ATA:98861507:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.25:NETAPP__:VD-9000MB-FZ-ATA:98861508:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.26:NETAPP__:VD-9000MB-FZ-ATA:98861509:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.27:NETAPP__:VD-9000MB-FZ-ATA:98861510:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.28:NETAPP__:VD-9000MB-FZ-ATA:98861511:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.29:NETAPP__:VD-9000MB-FZ-ATA:98861512:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v0.32:NETAPP__:VD-9000MB-FZ-ATA:98861513:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:32 v1.16:NETAPP__:VD-9000MB-FZ-ATA:11162600:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.17:NETAPP__:VD-9000MB-FZ-ATA:11162601:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.18:NETAPP__:VD-9000MB-FZ-ATA:11162602:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.19:NETAPP__:VD-9000MB-FZ-ATA:11162603:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.20:NETAPP__:VD-9000MB-FZ-ATA:11162604:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.21:NETAPP__:VD-9000MB-FZ-ATA:11162605:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.22:NETAPP__:VD-9000MB-FZ-ATA:11162606:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.24:NETAPP__:VD-9000MB-FZ-ATA:11162607:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.25:NETAPP__:VD-9000MB-FZ-ATA:11162608:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.26:NETAPP__:VD-9000MB-FZ-ATA:11162609:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.27:NETAPP__:VD-9000MB-FZ-ATA:11162610:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.28:NETAPP__:VD-9000MB-FZ-ATA:11162611:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.29:NETAPP__:VD-9000MB-FZ-ATA:11162612:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v1.32:NETAPP__:VD-9000MB-FZ-ATA:11162613:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.16:NETAPP__:VD-9000MB-FZ-ATA:13553400:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.17:NETAPP__:VD-9000MB-FZ-ATA:13553401:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.18:NETAPP__:VD-9000MB-FZ-ATA:13553402:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.19:NETAPP__:VD-9000MB-FZ-ATA:13553403:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.20:NETAPP__:VD-9000MB-FZ-ATA:13553404:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.21:NETAPP__:VD-9000MB-FZ-ATA:13553405:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.22:NETAPP__:VD-9000MB-FZ-ATA:13553406:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.24:NETAPP__:VD-9000MB-FZ-ATA:13553407:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.25:NETAPP__:VD-9000MB-FZ-ATA:13553408:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.26:NETAPP__:VD-9000MB-FZ-ATA:13553409:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.27:NETAPP__:VD-9000MB-FZ-ATA:13553410:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.28:NETAPP__:VD-9000MB-FZ-ATA:13553411:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.29:NETAPP__:VD-9000MB-FZ-ATA:13553412:20799504
+-rw-r--r--  1 root  wheel  10649346048 Apr 13 14:27 v2.32:NETAPP__:VD-9000MB-FZ-ATA:13553413:20799504
+c1-01% cd ,pulled/
+c1-01% ll
+total 3808
+-rw-r--r--  1 root  wheel      12416 Apr 13 14:40 v3.16:NETAPP__:VD-500MB-SS-520_:37391200:1080448
+-rw-r--r--  1 root  wheel  506455040 Apr 13 13:28 v3.16:NETAPP__:ZN-3500MB-SS-520:17512100:973952
+-rw-r--r--  1 root  wheel      12416 Apr 13 14:40 v3.17:NETAPP__:VD-500MB-SS-520_:37391201:1080448
+-rw-r--r--  1 root  wheel  506455040 Apr 13 13:28 v3.17:NETAPP__:ZN-3500MB-SS-520:17512101:973952
+-rw-r--r--  1 root  wheel      12416 Apr 13 14:40 v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448
+-rw-r--r--  1 root  wheel  506455040 Apr 13 13:28 v3.18:NETAPP__:ZN-3500MB-SS-520:17512102:973952
+-rw-r--r--  1 root  wheel      12416 Apr 13 14:40 v3.19:NETAPP__:VD-500MB-SS-520_:37391203:1080448
+-rw-r--r--  1 root  wheel  506455040 Apr 13 13:28 v3.19:NETAPP__:ZN-3500MB-SS-520:17512103:973952
+-rw-r--r--  1 root  wheel      12416 Apr 13 14:40 v3.20:NETAPP__:VD-500MB-SS-520_:37391204:1080448
+-rw-r--r--  1 root  wheel  506455040 Apr 13 13:28 v3.20:NETAPP__:ZN-3500MB-SS-520:17512104:973952
+-rw-r--r--  1 root  wheel      12416 Apr 13 14:40 v3.21:NETAPP__:VD-500MB-SS-520_:37391205:1080448
+-rw-r--r--  1 root  wheel  506455040 Apr 13 13:28 v3.21:NETAPP__:ZN-3500MB-SS-520:17512105:973952
+-rw-r--r--  1 root  wheel      12416 Apr 13 14:40 v3.22:NETAPP__:VD-500MB-SS-520_:37391206:1080448
+-rw-r--r--  1 root  wheel  506455040 Apr 13 13:28 v3.22:NETAPP__:ZN-3500MB-SS-520:17512106:973952
+-rw-r--r--  1 root  wheel      12416 Apr 13 14:40 v3.24:NETAPP__:VD-500MB-SS-520_:37391207:1080448
+-rw-r--r--  1 root  wheel  506455040 Apr 13 13:28 v3.24:NETAPP__:ZN-3500MB-SS-520:17512107:973952
+-rw-r--r--  1 root  wheel      12416 Apr 13 14:40 v3.25:NETAPP__:VD-500MB-SS-520_:37391208:1080448
+-rw-r--r--  1 root  wheel  506455040 Apr 13 13:28 v3.25:NETAPP__:ZN-3500MB-SS-520:17512108:973952
+-rw-r--r--  1 root  wheel      12416 Apr 13 14:40 v3.26:NETAPP__:VD-500MB-SS-520_:37391209:1080448
+-rw-r--r--  1 root  wheel  506455040 Apr 13 13:28 v3.26:NETAPP__:ZN-3500MB-SS-520:17512109:973952
+-rw-r--r--  1 root  wheel      12416 Apr 13 14:40 v3.27:NETAPP__:VD-500MB-SS-520_:37391210:1080448
+-rw-r--r--  1 root  wheel  506455040 Apr 13 13:28 v3.27:NETAPP__:ZN-3500MB-SS-520:17512110:973952
+-rw-r--r--  1 root  wheel      12416 Apr 13 14:40 v3.28:NETAPP__:VD-500MB-SS-520_:37391211:1080448
+-rw-r--r--  1 root  wheel  506455040 Apr 13 13:28 v3.28:NETAPP__:ZN-3500MB-SS-520:17512111:973952
+-rw-r--r--  1 root  wheel      12416 Apr 13 14:40 v3.29:NETAPP__:VD-500MB-SS-520_:37391212:1080448
+-rw-r--r--  1 root  wheel  506455040 Apr 13 13:28 v3.29:NETAPP__:ZN-3500MB-SS-520:17512112:973952
+-rw-r--r--  1 root  wheel      12416 Apr 13 14:40 v3.32:NETAPP__:VD-500MB-SS-520_:37391213:1080448
+-rw-r--r--  1 root  wheel  506455040 Apr 13 13:28 v3.32:NETAPP__:ZN-3500MB-SS-520:17512113:973952
+c1-01% exit
+logout
+
+c1::*> pr
+    priority        priv            protection-type protocol
+
+c1::*> priv set dia
+  "priv set" is not supported: use the "set -privilege" command.
+
+c1::*> node run
+Type 'exit' or 'Ctrl-D' to return to the CLI
+c1-01> disk
+usage: disk <options>
+Options are:
+        assign {<disk_name> | all | [-T <storage type> | -shelf <shelf name>] [-n <count>] | auto} [-p <pool>] {[-o <ownername>] [-s <sysid>] | [-copy-ownership-from <disk-name>]} [-c block|advanced_zoned] [-f] - assign a disk to a filer or all unowned disks by specifying "all"  or <count> number of unowned disks
+        fail [-i] [-f] <disk_name>  - fail a file system disk
+        maint { start | abort | status | list} - run maintenance tests on one or more disks
+        remove [-w] <disk_name>     - remove a spare disk
+        replace {start [-f] [-m] <disk_name> <spare_disk_name>} | {stop <disk_name>} - replace a file system disk with a spare disk or stop replacing
+        sanitize { start | abort | status | release } - sanitize one or more disks
+        scrub  { start | stop }     - start or stop disk scrubbing
+        show [-o <ownername> | -s <sysid> | -n | -v | -a | -m | -w | -S <disk_serialno> | -c <cluster_disk_name> ]  - lists disks and owners
+        simpull <disk_name1> [<disk_name2> [<disk_name3> ... ]]  - simulate one or more disk pulls
+        simpush [<sim_disk_path_name1> [<sim_disk_path_name2> [<sim_disk_path_name3> ...]] | -l] - simulate one or more disk pushes or list available disks to push
+        zero spares - Zero all spare disks
+c1-01> disk simpush -l
+
+
+The following pulled disks are available for pushing:
+         v3.16:NETAPP__:ZN-3500MB-SS-520:17512100:973952
+         v3.18:NETAPP__:ZN-3500MB-SS-520:17512102:973952
+         v3.17:NETAPP__:ZN-3500MB-SS-520:17512101:973952
+         v3.19:NETAPP__:ZN-3500MB-SS-520:17512103:973952
+         v3.20:NETAPP__:ZN-3500MB-SS-520:17512104:973952
+         v3.21:NETAPP__:ZN-3500MB-SS-520:17512105:973952
+         v3.22:NETAPP__:ZN-3500MB-SS-520:17512106:973952
+         v3.24:NETAPP__:ZN-3500MB-SS-520:17512107:973952
+         v3.25:NETAPP__:ZN-3500MB-SS-520:17512108:973952
+         v3.26:NETAPP__:ZN-3500MB-SS-520:17512109:973952
+         v3.27:NETAPP__:ZN-3500MB-SS-520:17512110:973952
+         v3.28:NETAPP__:ZN-3500MB-SS-520:17512111:973952
+         v3.29:NETAPP__:ZN-3500MB-SS-520:17512112:973952
+         v3.32:NETAPP__:ZN-3500MB-SS-520:17512113:973952
+         v3.16:NETAPP__:VD-500MB-SS-520_:37391200:1080448
+         v3.17:NETAPP__:VD-500MB-SS-520_:37391201:1080448
+         v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448
+         v3.19:NETAPP__:VD-500MB-SS-520_:37391203:1080448
+         v3.20:NETAPP__:VD-500MB-SS-520_:37391204:1080448
+         v3.21:NETAPP__:VD-500MB-SS-520_:37391205:1080448
+         v3.22:NETAPP__:VD-500MB-SS-520_:37391206:1080448
+         v3.24:NETAPP__:VD-500MB-SS-520_:37391207:1080448
+         v3.25:NETAPP__:VD-500MB-SS-520_:37391208:1080448
+         v3.26:NETAPP__:VD-500MB-SS-520_:37391209:1080448
+         v3.27:NETAPP__:VD-500MB-SS-520_:37391210:1080448
+         v3.28:NETAPP__:VD-500MB-SS-520_:37391211:1080448
+         v3.29:NETAPP__:VD-500MB-SS-520_:37391212:1080448
+         v3.32:NETAPP__:VD-500MB-SS-520_:37391213:1080448
+c1-01> disk simpush v3.**:NETAPP__:VD-500MB-SS-520_:*
+
+
+Failed to open file /sim/dev/,disks/,pulled/v3.**:NETAPP__:VD-500MB-SS-520_:*: No such file or directory.
+disk simpush: Failed to add disk v3.**:NETAPP__:VD-500MB-SS-520_:*
+c1-01> disk simpush v3.16:NETAPP__:VD-500MB-SS-520_:37391200:1080448
+c1-01> disk simpush v3.17:NETAPP__:VD-500MB-SS-520_:37391201:1080448
+c1-01> disk simpush v3.18:NETAPP__:VD-500MB-SS-520_:37391202:10804418 v3.19:NETAPP__:VD-500MB-SS-520_:37391203:1080448 v3.20:NETAPP__:VD-500MB-SS-520_:37391204:1080448 v3.21:NETAPP__:VD-500MB-SS-520_:37391205:1080448  v3.22:NETAPP__:VD-500MB-SS-520_:37391206:1080448 v3.24:NETAPP__:VD-500MB-SS-520_:37391207:1080448 v3.25:NETAPP__:VD-500MB-SS-520_:37391208:1080448 v3.26:NETAPP__:VD-500MB-SS-520_:37391209:1080448 v3.27:NETAPP__:VD-500MB-SS-520_:37391210:1080448 v3.28:NETAPP__:VD-500MB-SS-520_:37391211:1080448 v3.29:NETAPP__:VD-500MB-SS-520_:37391212:1080448 v3.32:NETAPP__:VD-500MB-SS-520_:37391213:1080448
+
+
+Failed to open file /sim/dev/,disks/,pulled/v3.18:NETAPP__:VD-500MB-SS-520_:37391202:10804418: No such file or directory.
+disk simpush: Failed to add disk v3.18:NETAPP__:VD-500MB-SS-520_:37391202:10804418
+c1-01> disk simpush v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448 v3.19:NETAPP__:VD-500MB-SS-520_:37391203:1080448 v3.20:NETAPP__:VD-500MB-SS-520_:37391204:1080448 v3.21:NETAPP__:VD-500MB-SS-520_:37391205:1080448  v3.22:NETAPP__:VD-500MB-SS-520_:37391206:10
+
+
+Failed to open file /sim/dev/,disks/,pulled/v3.19:NETAPP__:VD-500MB-SS-520_:37391203:1080448: No such file or directory.
+disk simpush: Failed to add disk v3.19:NETAPP__:VD-500MB-SS-520_:37391203:1080448
+
+
+Failed to open file /sim/dev/,disks/,pulled/v3.20:NETAPP__:VD-500MB-SS-520_:37391204:1080448: No such file or directory.
+disk simpush: Failed to add disk v3.20:NETAPP__:VD-500MB-SS-520_:37391204:1080448
+
+
+Failed to open file /sim/dev/,disks/,pulled/v3.21:NETAPP__:VD-500MB-SS-520_:37391205:1080448: No such file or directory.
+disk simpush: Failed to add disk v3.21:NETAPP__:VD-500MB-SS-520_:37391205:1080448
+
+
+Failed to open file /sim/dev/,disks/,pulled/v3.22:NETAPP__:VD-500MB-SS-520_:37391206:10: No such file or directory.
+disk simpush: Failed to add disk v3.22:NETAPP__:VD-500MB-SS-520_:37391206:10
+c1-01> disk simpush v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448
+Failed to open file /sim/dev/,disks/,pulled/v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448: No such file or directory.
+disk simpush: Failed to add disk v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448
+c1-01> disk simpush v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448
+
+
+Failed to open file /sim/dev/,disks/,pulled/v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448: No such file or directory.
+disk simpush: Failed to add disk v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448
+c1-01>
+c1-01>
+c1-01>
+c1-01>
+c1-01>
+c1-01>
+c1-01>
+c1-01>
+c1-01>
+c1-01>
+c1-01> disk simpush v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448
+
+
+Failed to open file /sim/dev/,disks/,pulled/v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448: No such file or directory.
+disk simpush: Failed to add disk v3.18:NETAPP__:VD-500MB-SS-520_:37391202:1080448
+c1-01> disk simpush v3.19:NETAPP__:VD-500MB-SS-520_:37391203:1080448 v3.20:NETAPP__:VD-500MB-SS-520_:37391204:1080448 v3.21:NETAPP__:VD-500MB-SS-520_:37391205:1080448  v3.22:NETAPP__:VD-500MB-SS-520_:37391206:10
+
+Failed to open file /sim/dev/,disks/,pulled/v3.19:NETAPP__:VD-500MB-SS-520_:37391203:1080448: No such file or directory.
+disk simpush: Failed to add disk v3.19:NETAPP__:VD-500MB-SS-520_:37391203:1080448
+
+
+Failed to open file /sim/dev/,disks/,pulled/v3.20:NETAPP__:VD-500MB-SS-520_:37391204:1080448: No such file or directory.
+disk simpush: Failed to add disk v3.20:NETAPP__:VD-500MB-SS-520_:37391204:1080448
+
+
+Failed to open file /sim/dev/,disks/,pulled/v3.21:NETAPP__:VD-500MB-SS-520_:37391205:1080448: No such file or directory.
+disk simpush: Failed to add disk v3.21:NETAPP__:VD-500MB-SS-520_:37391205:1080448
+
+
+Failed to open file /sim/dev/,disks/,pulled/v3.22:NETAPP__:VD-500MB-SS-520_:37391206:10: No such file or directory.
+disk simpush: Failed to add disk v3.22:NETAPP__:VD-500MB-SS-520_:37391206:10
+c1-01> disk simpull -l                                                                                                  disk simpull: Disk -l does not exist.
+c1-01> disk simpull -l                                                                                                  disk simpull: Disk -l does not exist.
+c1-01> disk
+usage: disk <options>
+Options are:
+        assign {<disk_name> | all | [-T <storage type> | -shelf <shelf name>] [-n <count>] | auto} [-p <pool>] {[-o <ownername>] [-s <sysid>] | [-copy-ownership-from <disk-name>]} [-c block|advanced_zoned] [-f] - assign a disk to a filer or all unowned disks by specifying "all"  or <count> number of unowned disks
+        fail [-i] [-f] <disk_name>  - fail a file system disk
+        maint { start | abort | status | list} - run maintenance tests on one or more disks
+        remove [-w] <disk_name>     - remove a spare disk
+        replace {start [-f] [-m] <disk_name> <spare_disk_name>} | {stop <disk_name>} - replace a file system disk with a spare disk or stop replacing
+        sanitize { start | abort | status | release } - sanitize one or more disks
+        scrub  { start | stop }     - start or stop disk scrubbing
+        show [-o <ownername> | -s <sysid> | -n | -v | -a | -m | -w | -S <disk_serialno> | -c <cluster_disk_name> ]  - lists disks and owners
+        simpull <disk_name1> [<disk_name2> [<disk_name3> ... ]]  - simulate one or more disk pulls
+        simpush [<sim_disk_path_name1> [<sim_disk_path_name2> [<sim_disk_path_name3> ...]] | -l] - simulate one or more disk pushes or list available disks to push
+        zero spares - Zero all spare disks
+c1-01> disk simpush -l
+
+
+The following pulled disks are available for pushing:
+         v3.16:NETAPP__:ZN-3500MB-SS-520:17512100:973952
+         v3.18:NETAPP__:ZN-3500MB-SS-520:17512102:973952
+         v3.17:NETAPP__:ZN-3500MB-SS-520:17512101:973952
+         v3.19:NETAPP__:ZN-3500MB-SS-520:17512103:973952
+         v3.20:NETAPP__:ZN-3500MB-SS-520:17512104:973952
+         v3.21:NETAPP__:ZN-3500MB-SS-520:17512105:973952
+         v3.22:NETAPP__:ZN-3500MB-SS-520:17512106:973952
+         v3.24:NETAPP__:ZN-3500MB-SS-520:17512107:973952
+         v3.25:NETAPP__:ZN-3500MB-SS-520:17512108:973952
+         v3.26:NETAPP__:ZN-3500MB-SS-520:17512109:973952
+         v3.27:NETAPP__:ZN-3500MB-SS-520:17512110:973952
+         v3.28:NETAPP__:ZN-3500MB-SS-520:17512111:973952
+         v3.29:NETAPP__:ZN-3500MB-SS-520:17512112:973952
+         v3.32:NETAPP__:ZN-3500MB-SS-520:17512113:973952
+c1-01> exit                                                                                                             logout
+
+c1::*> disk show
+                     Usable           Disk    Container   Container
+Disk                   Size Shelf Bay Type    Type        Name      Owner
+---------------- ---------- ----- --- ------- ----------- --------- --------
+NET-1.1              8.81GB     -  16 ATA     aggregate   c1n1_data c1-01
+NET-1.2              8.81GB     -  17 ATA     aggregate   c1n1_data c1-01
+NET-1.3              8.81GB     -  18 ATA     aggregate   c1n1_data c1-01
+NET-1.4              8.81GB     -  19 ATA     aggregate   c1n1_data c1-01
+NET-1.5              8.81GB     -  20 ATA     aggregate   c1n1_data c1-01
+NET-1.6              8.81GB     -  21 ATA     aggregate   c1n1_data c1-01
+NET-1.7              8.81GB     -  22 ATA     aggregate   c1n1_data c1-01
+NET-1.8              8.81GB     -  16 ATA     spare       Pool0     c1-01
+NET-1.9              8.81GB     -  17 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.10             8.81GB     -  24 ATA     aggregate   c1n1_data c1-01
+NET-1.11             8.81GB     -  25 ATA     aggregate   c1n1_data c1-01
+NET-1.12             8.81GB     -  18 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.13             8.81GB     -  19 ATA     aggregate   c1n1_data c1-01
+NET-1.14             8.81GB     -  20 ATA     aggregate   c1n1_data c1-01
+NET-1.15             8.81GB     -  21 ATA     aggregate   c1n1_data c1-01
+NET-1.16             8.81GB     -  22 ATA     aggregate   c1n1_data c1-01
+NET-1.17             8.81GB     -  24 ATA     aggregate   c1n1_data c1-01
+NET-1.18             8.81GB     -  25 ATA     aggregate   c1n1_data c1-01
+NET-1.19             8.81GB     -  26 ATA     aggregate   c1n1_data c1-01
+NET-1.20             8.81GB     -  27 ATA     aggregate   c1n1_data c1-01
+NET-1.21             8.81GB     -  28 ATA     aggregate   c1n1_data c1-01
+NET-1.22             8.81GB     -  29 ATA     aggregate   c1n1_data c1-01
+NET-1.23             8.81GB     -  32 ATA     aggregate   c1n1_data c1-01
+NET-1.24             8.81GB     -  26 ATA     aggregate   c1n1_data c1-01
+NET-1.25             8.81GB     -  27 ATA     aggregate   c1n1_data c1-01
+NET-1.26             8.81GB     -  28 ATA     aggregate   c1n1_data c1-01
+NET-1.27             8.81GB     -  29 ATA     aggregate   c1n1_data c1-01
+NET-1.28             8.81GB     -  32 ATA     aggregate   c1n1_data c1-01
+NET-1.29             8.81GB     -  16 ATA     aggregate   c1n1_data c1-01
+NET-1.30             8.81GB     -  17 ATA     aggregate   c1n1_data c1-01
+NET-1.31             8.81GB     -  18 ATA     aggregate   c1n1_data c1-01
+NET-1.32             8.81GB     -  19 ATA     aggregate   c1n1_data c1-01
+NET-1.33             8.81GB     -  20 ATA     aggregate   c1n1_data c1-01
+NET-1.34             8.81GB     -  21 ATA     aggregate   c1n1_data c1-01
+NET-1.35             8.81GB     -  22 ATA     aggregate   c1n1_data c1-01
+NET-1.36             8.81GB     -  24 ATA     aggregate   c1n1_data c1-01
+NET-1.37             8.81GB     -  25 ATA     aggregate   c1n1_data c1-01
+NET-1.38             8.81GB     -  26 ATA     aggregate   c1n1_data c1-01
+NET-1.39             8.81GB     -  27 ATA     aggregate   c1n1_data c1-01
+NET-1.40             8.81GB     -  28 ATA     aggregate   c1n1_data c1-01
+NET-1.41             8.81GB     -  29 ATA     aggregate   c1n1_data c1-01
+NET-1.42             8.81GB     -  32 ATA     aggregate   c1n1_data c1-01
+NET-1.43                  -     -  16 SSD     unassigned  -         -
+NET-1.44                  -     -  17 SSD     unassigned  -         -
+NET-1.45                  -     -  19 SSD     unassigned  -         -
+NET-1.46                  -     -  20 SSD     unassigned  -         -
+NET-1.47                  -     -  21 SSD     unassigned  -         -
+NET-1.48                  -     -  22 SSD     unassigned  -         -
+NET-1.49                  -     -  24 SSD     unassigned  -         -
+NET-1.50                  -     -  25 SSD     unassigned  -         -
+NET-1.51                  -     -  26 SSD     unassigned  -         -
+NET-1.52                  -     -  27 SSD     unassigned  -         -
+NET-1.53                  -     -  28 SSD     unassigned  -         -
+NET-1.54                  -     -  29 SSD     unassigned  -         -
+NET-1.55                  -     -  32 SSD     unassigned  -         -
+NET-1.56                  -     -  18 SSD     unassigned  -         -
+56 entries were displayed.
+
+c1::*> disk
+    disk           disk_fw_update
+c1::*> disk
+    assign             create-partition   error
+    fail               firmware           option
+    partition          reassign           refresh-ownership
+    remove             remove-reservation removeowner
+    replace            set-foreign-lun    set-led
+    show               unfail             unpartition
+    updatefirmware     zerospares
+
+c1::*> disk assign -disklist
+  <disk path name>            Disk list
+c1::*> disk assign -disklist
+  <disk path name>            Disk list
+
+c1::*> disk assign -all true -
+    -pool                -owner               -sysid
+    -copy-ownership-from -checksum            -force
+    -node                -root                -data
+    -data1               -data2
+c1::*> disk assign -all true -node c1-01 -
+    -pool                -owner               -sysid
+    -copy-ownership-from -checksum            -force
+    -root                -data                -data1
+    -data2
+c1::*> disk assign -all true -node c1-01 -
+    -pool                -owner               -sysid
+    -copy-ownership-from -checksum            -force
+    -root                -data                -data1
+    -data2
+
+c1::*> disk assign -all true -node c1-01 -
+    -pool                -owner               -sysid
+    -copy-ownership-from -checksum            -force
+    -root                -data                -data1
+    -data2
+
+c1::*> disk assign -all true -node c1-01
+
+c1::*> disk show
+                     Usable           Disk    Container   Container
+Disk                   Size Shelf Bay Type    Type        Name      Owner
+---------------- ---------- ----- --- ------- ----------- --------- --------
+NET-1.1              8.81GB     -  16 ATA     aggregate   c1n1_data c1-01
+NET-1.2              8.81GB     -  17 ATA     aggregate   c1n1_data c1-01
+NET-1.3              8.81GB     -  18 ATA     aggregate   c1n1_data c1-01
+NET-1.4              8.81GB     -  19 ATA     aggregate   c1n1_data c1-01
+NET-1.5              8.81GB     -  20 ATA     aggregate   c1n1_data c1-01
+NET-1.6              8.81GB     -  21 ATA     aggregate   c1n1_data c1-01
+NET-1.7              8.81GB     -  22 ATA     aggregate   c1n1_data c1-01
+NET-1.8              8.81GB     -  16 ATA     spare       Pool0     c1-01
+NET-1.9              8.81GB     -  17 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.10             8.81GB     -  24 ATA     aggregate   c1n1_data c1-01
+NET-1.11             8.81GB     -  25 ATA     aggregate   c1n1_data c1-01
+NET-1.12             8.81GB     -  18 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.13             8.81GB     -  19 ATA     aggregate   c1n1_data c1-01
+NET-1.14             8.81GB     -  20 ATA     aggregate   c1n1_data c1-01
+NET-1.15             8.81GB     -  21 ATA     aggregate   c1n1_data c1-01
+NET-1.16             8.81GB     -  22 ATA     aggregate   c1n1_data c1-01
+NET-1.17             8.81GB     -  24 ATA     aggregate   c1n1_data c1-01
+NET-1.18             8.81GB     -  25 ATA     aggregate   c1n1_data c1-01
+NET-1.19             8.81GB     -  26 ATA     aggregate   c1n1_data c1-01
+NET-1.20             8.81GB     -  27 ATA     aggregate   c1n1_data c1-01
+NET-1.21             8.81GB     -  28 ATA     aggregate   c1n1_data c1-01
+NET-1.22             8.81GB     -  29 ATA     aggregate   c1n1_data c1-01
+NET-1.23             8.81GB     -  32 ATA     aggregate   c1n1_data c1-01
+NET-1.24             8.81GB     -  26 ATA     aggregate   c1n1_data c1-01
+NET-1.25             8.81GB     -  27 ATA     aggregate   c1n1_data c1-01
+NET-1.26             8.81GB     -  28 ATA     aggregate   c1n1_data c1-01
+NET-1.27             8.81GB     -  29 ATA     aggregate   c1n1_data c1-01
+NET-1.28             8.81GB     -  32 ATA     aggregate   c1n1_data c1-01
+NET-1.29             8.81GB     -  16 ATA     aggregate   c1n1_data c1-01
+NET-1.30             8.81GB     -  17 ATA     aggregate   c1n1_data c1-01
+NET-1.31             8.81GB     -  18 ATA     aggregate   c1n1_data c1-01
+NET-1.32             8.81GB     -  19 ATA     aggregate   c1n1_data c1-01
+NET-1.33             8.81GB     -  20 ATA     aggregate   c1n1_data c1-01
+NET-1.34             8.81GB     -  21 ATA     aggregate   c1n1_data c1-01
+NET-1.35             8.81GB     -  22 ATA     aggregate   c1n1_data c1-01
+NET-1.36             8.81GB     -  24 ATA     aggregate   c1n1_data c1-01
+NET-1.37             8.81GB     -  25 ATA     aggregate   c1n1_data c1-01
+NET-1.38             8.81GB     -  26 ATA     aggregate   c1n1_data c1-01
+NET-1.39             8.81GB     -  27 ATA     aggregate   c1n1_data c1-01
+NET-1.40             8.81GB     -  28 ATA     aggregate   c1n1_data c1-01
+NET-1.41             8.81GB     -  29 ATA     aggregate   c1n1_data c1-01
+NET-1.42             8.81GB     -  32 ATA     aggregate   c1n1_data c1-01
+NET-1.43            520.5MB     -  16 SSD     spare       Pool0     c1-01
+NET-1.44            520.5MB     -  17 SSD     spare       Pool0     c1-01
+NET-1.45            520.5MB     -  19 SSD     spare       Pool0     c1-01
+NET-1.46            520.5MB     -  20 SSD     spare       Pool0     c1-01
+NET-1.47            520.5MB     -  21 SSD     spare       Pool0     c1-01
+NET-1.48            520.5MB     -  22 SSD     spare       Pool0     c1-01
+NET-1.49            520.5MB     -  24 SSD     spare       Pool0     c1-01
+NET-1.50            520.5MB     -  25 SSD     spare       Pool0     c1-01
+NET-1.51            520.5MB     -  26 SSD     spare       Pool0     c1-01
+NET-1.52            520.5MB     -  27 SSD     spare       Pool0     c1-01
+NET-1.53            520.5MB     -  28 SSD     spare       Pool0     c1-01
+NET-1.54            520.5MB     -  29 SSD     spare       Pool0     c1-01
+NET-1.55            520.5MB     -  32 SSD     spare       Pool0     c1-01
+NET-1.56            520.5MB     -  18 SSD     spare       Pool0     c1-01
+56 entries were displayed.
+
+c1::*> disk
+    disk           disk_fw_update
+c1::*> a
+    acp          acpadmin     aggr         application  async-delete
+    autobalance  autosupport  awa
+
+c1::*> agre
+
+Error: "agre" is not a recognized command
+c1::*> aggregate
+    aggregate  aggregates
+c1::*> aggregate cra
+
+Error: "cra" is not a recognized command
+c1::*> aggregate create -aggregate
+  <aggregate name>            Aggregate
+c1::*> aggregate create -aggregate
+  <aggregate name>            Aggregate
+
+c1::*> aggregate create -aggregate c1n1_ssd -diskcount
+  <integer>                   Number Of Disks
+c1::*> aggregate create -aggregate c1n1_ssd -diskcount
+  <integer>                   Number Of Disks
+
+c1::*> aggregate create -aggregate c1n1_ssd -diskcount 13 -
+    -chksumstyle
+    -diskrpm
+    -disksize
+    -disktype
+    -diskclass
+    -mirror
+    -pool
+    -node
+    -maxraidsize
+    -raidtype
+    -simulate
+    -force-small-aggregate
+    -is-autobalance-eligible
+    -snaplock-type
+    -autobalance-unbalanced-threshold-percent
+    -autobalance-available-threshold-percent
+    -encrypt-with-aggr-key
+c1::*> aggregate create -aggregate c1n1_ssd -diskcount 13 -disk
+    -diskrpm   -disksize  -disktype  -diskclass
+c1::*> aggregate create -aggregate c1n1_ssd -diskcount 13 -disktype
+    ATA       BSAS      FCAL      FSAS      LUN       MSATA     SAS
+    SSD       VMDISK    SSD-NVM   SSD-CAP   VMLUN     VMLUN-SSD
+
+c1::*> aggregate create -aggregate c1n1_ssd -diskcount 13 -disktype SSD -
+    -chksumstyle
+    -diskrpm
+    -disksize
+    -mirror
+    -pool
+    -node
+    -maxraidsize
+    -raidtype
+    -simulate
+    -force-small-aggregate
+    -is-autobalance-eligible
+    -snaplock-type
+    -autobalance-unbalanced-threshold-percent
+    -autobalance-available-threshold-percent
+    -encrypt-with-aggr-key
+c1::*> aggregate create -aggregate c1n1_ssd -diskcount 13 -disktype SSD
+  (storage aggregate create)
+
+Info: The layout for aggregate "c1n1_ssd" on node "c1-01" would be:
+
+      First Plex
+
+        RAID Group rg0, 13 disks (block checksum, raid_dp)
+                                                            Usable Physical
+          Position   Disk                      Type           Size     Size
+          ---------- ------------------------- ---------- -------- --------
+          dparity    NET-1.43                  SSD               -        -
+          parity     NET-1.44                  SSD               -        -
+          data       NET-1.56                  SSD           500MB  527.6MB
+          data       NET-1.45                  SSD           500MB  527.6MB
+          data       NET-1.46                  SSD           500MB  527.6MB
+          data       NET-1.47                  SSD           500MB  527.6MB
+          data       NET-1.48                  SSD           500MB  527.6MB
+          data       NET-1.49                  SSD           500MB  527.6MB
+          data       NET-1.50                  SSD           500MB  527.6MB
+          data       NET-1.51                  SSD           500MB  527.6MB
+          data       NET-1.52                  SSD           500MB  527.6MB
+          data       NET-1.53                  SSD           500MB  527.6MB
+          data       NET-1.54                  SSD           500MB  527.6MB
+
+      Aggregate capacity available for volume use would be 4.83GB.
+
+Do you want to continue? {y|n}: n
+
+c1::*> aggregate create -aggregate c1n1_ssd -diskcount 13 -disktype SSD -raidtype raid
+    raid_tec raid_dp  raid4
+c1::*> aggregate create -aggregate c1n1_ssd -diskcount 13 -disktype SSD -raidtype raid4 -
+    -chksumstyle
+    -diskrpm
+    -disksize
+    -mirror
+    -pool
+    -node
+    -maxraidsize
+    -simulate
+    -force-small-aggregate
+    -is-autobalance-eligible
+    -snaplock-type
+    -autobalance-unbalanced-threshold-percent
+    -autobalance-available-threshold-percent
+    -encrypt-with-aggr-key
+c1::*> aggregate create -aggregate c1n1_ssd -diskcount 13 -disktype SSD -raidtype raid4
+  (storage aggregate create)
+
+Info: The layout for aggregate "c1n1_ssd" on node "c1-01" would be:
+
+      First Plex
+
+        RAID Group rg0, 8 disks (block checksum, raid4)
+                                                            Usable Physical
+          Position   Disk                      Type           Size     Size
+          ---------- ------------------------- ---------- -------- --------
+          parity     NET-1.43                  SSD               -        -
+          data       NET-1.44                  SSD           500MB  527.6MB
+          data       NET-1.56                  SSD           500MB  527.6MB
+          data       NET-1.45                  SSD           500MB  527.6MB
+          data       NET-1.46                  SSD           500MB  527.6MB
+          data       NET-1.47                  SSD           500MB  527.6MB
+          data       NET-1.48                  SSD           500MB  527.6MB
+          data       NET-1.49                  SSD           500MB  527.6MB
+
+        RAID Group rg1, 5 disks (block checksum, raid4)
+                                                            Usable Physical
+          Position   Disk                      Type           Size     Size
+          ---------- ------------------------- ---------- -------- --------
+          parity     NET-1.50                  SSD               -        -
+          data       NET-1.51                  SSD           500MB  527.6MB
+          data       NET-1.52                  SSD           500MB  527.6MB
+          data       NET-1.53                  SSD           500MB  527.6MB
+          data       NET-1.54                  SSD           500MB  527.6MB
+
+      Aggregate capacity available for volume use would be 4.83GB.
+
+Do you want to continue? {y|n}: re       Pool0     c1-01
+Do you want to continue? {y|n}: NET-1.44            520.5MB     -  17 SSD     spare       Pool0     c1-01
+Do you want to continue? {y|n}: NET-1.45            520.5MB     -  19 SSD     spare       Pool0     c1-01
+Do you want to continue? {y|n}: NET-1.46            520.5MB     -  20 SSD     spare       Pool0     c1-01
+Do you want to continue? {y|n}: n
+
+c1::*> aggregate create -aggregate c1n1_ssd -diskcount 13 -disktype SSD -raidtype raid4 -m
+    -mirror      -maxraidsize
+
+c1::*> aggregate create -aggregate c1n1_ssd -diskcount 13 -disktype SSD -raidtype raid4 -maxraidsize 13
+  (storage aggregate create)
+
+Info: The layout for aggregate "c1n1_ssd" on node "c1-01" would be:
+
+      First Plex
+
+        RAID Group rg0, 13 disks (block checksum, raid4)
+                                                            Usable Physical
+          Position   Disk                      Type           Size     Size
+          ---------- ------------------------- ---------- -------- --------
+          parity     NET-1.43                  SSD               -        -
+          data       NET-1.44                  SSD           500MB  527.6MB
+          data       NET-1.56                  SSD           500MB  527.6MB
+          data       NET-1.45                  SSD           500MB  527.6MB
+          data       NET-1.46                  SSD           500MB  527.6MB
+          data       NET-1.47                  SSD           500MB  527.6MB
+          data       NET-1.48                  SSD           500MB  527.6MB
+          data       NET-1.49                  SSD           500MB  527.6MB
+          data       NET-1.50                  SSD           500MB  527.6MB
+          data       NET-1.51                  SSD           500MB  527.6MB
+          data       NET-1.52                  SSD           500MB  527.6MB
+          data       NET-1.53                  SSD           500MB  527.6MB
+          data       NET-1.54                  SSD           500MB  527.6MB
+
+      Aggregate capacity available for volume use would be 5.27GB.
+
+Do you want to continue? {y|n}: y
+[Job 24] Job succeeded: DONE
+
+c1::*> disk show
+                     Usable           Disk    Container   Container
+Disk                   Size Shelf Bay Type    Type        Name      Owner
+---------------- ---------- ----- --- ------- ----------- --------- --------
+NET-1.1              8.81GB     -  16 ATA     aggregate   c1n1_data c1-01
+NET-1.2              8.81GB     -  17 ATA     aggregate   c1n1_data c1-01
+NET-1.3              8.81GB     -  18 ATA     aggregate   c1n1_data c1-01
+NET-1.4              8.81GB     -  19 ATA     aggregate   c1n1_data c1-01
+NET-1.5              8.81GB     -  20 ATA     aggregate   c1n1_data c1-01
+NET-1.6              8.81GB     -  21 ATA     aggregate   c1n1_data c1-01
+NET-1.7              8.81GB     -  22 ATA     aggregate   c1n1_data c1-01
+NET-1.8              8.81GB     -  16 ATA     spare       Pool0     c1-01
+NET-1.9              8.81GB     -  17 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.10             8.81GB     -  24 ATA     aggregate   c1n1_data c1-01
+NET-1.11             8.81GB     -  25 ATA     aggregate   c1n1_data c1-01
+NET-1.12             8.81GB     -  18 ATA     aggregate   aggr0_c1_01 c1-01
+NET-1.13             8.81GB     -  19 ATA     aggregate   c1n1_data c1-01
+NET-1.14             8.81GB     -  20 ATA     aggregate   c1n1_data c1-01
+NET-1.15             8.81GB     -  21 ATA     aggregate   c1n1_data c1-01
+NET-1.16             8.81GB     -  22 ATA     aggregate   c1n1_data c1-01
+NET-1.17             8.81GB     -  24 ATA     aggregate   c1n1_data c1-01
+NET-1.18             8.81GB     -  25 ATA     aggregate   c1n1_data c1-01
+NET-1.19             8.81GB     -  26 ATA     aggregate   c1n1_data c1-01
+NET-1.20             8.81GB     -  27 ATA     aggregate   c1n1_data c1-01
+NET-1.21             8.81GB     -  28 ATA     aggregate   c1n1_data c1-01
+NET-1.22             8.81GB     -  29 ATA     aggregate   c1n1_data c1-01
+NET-1.23             8.81GB     -  32 ATA     aggregate   c1n1_data c1-01
+NET-1.24             8.81GB     -  26 ATA     aggregate   c1n1_data c1-01
+NET-1.25             8.81GB     -  27 ATA     aggregate   c1n1_data c1-01
+NET-1.26             8.81GB     -  28 ATA     aggregate   c1n1_data c1-01
+NET-1.27             8.81GB     -  29 ATA     aggregate   c1n1_data c1-01
+NET-1.28             8.81GB     -  32 ATA     aggregate   c1n1_data c1-01
+NET-1.29             8.81GB     -  16 ATA     aggregate   c1n1_data c1-01
+NET-1.30             8.81GB     -  17 ATA     aggregate   c1n1_data c1-01
+NET-1.31             8.81GB     -  18 ATA     aggregate   c1n1_data c1-01
+NET-1.32             8.81GB     -  19 ATA     aggregate   c1n1_data c1-01
+NET-1.33             8.81GB     -  20 ATA     aggregate   c1n1_data c1-01
+NET-1.34             8.81GB     -  21 ATA     aggregate   c1n1_data c1-01
+NET-1.35             8.81GB     -  22 ATA     aggregate   c1n1_data c1-01
+NET-1.36             8.81GB     -  24 ATA     aggregate   c1n1_data c1-01
+NET-1.37             8.81GB     -  25 ATA     aggregate   c1n1_data c1-01
+NET-1.38             8.81GB     -  26 ATA     aggregate   c1n1_data c1-01
+NET-1.39             8.81GB     -  27 ATA     aggregate   c1n1_data c1-01
+NET-1.40             8.81GB     -  28 ATA     aggregate   c1n1_data c1-01
+NET-1.41             8.81GB     -  29 ATA     aggregate   c1n1_data c1-01
+NET-1.42             8.81GB     -  32 ATA     aggregate   c1n1_data c1-01
+NET-1.43            520.5MB     -  16 SSD     aggregate   c1n1_ssd  c1-01
+NET-1.44            520.5MB     -  17 SSD     aggregate   c1n1_ssd  c1-01
+NET-1.45            520.5MB     -  19 SSD     aggregate   c1n1_ssd  c1-01
+NET-1.46            520.5MB     -  20 SSD     aggregate   c1n1_ssd  c1-01
+NET-1.47            520.5MB     -  21 SSD     aggregate   c1n1_ssd  c1-01
+NET-1.48            520.5MB     -  22 SSD     aggregate   c1n1_ssd  c1-01
+NET-1.49            520.5MB     -  24 SSD     aggregate   c1n1_ssd  c1-01
+NET-1.50            520.5MB     -  25 SSD     aggregate   c1n1_ssd  c1-01
+NET-1.51            520.5MB     -  26 SSD     aggregate   c1n1_ssd  c1-01
+NET-1.52            520.5MB     -  27 SSD     aggregate   c1n1_ssd  c1-01
+NET-1.53            520.5MB     -  28 SSD     aggregate   c1n1_ssd  c1-01
+NET-1.54            520.5MB     -  29 SSD     aggregate   c1n1_ssd  c1-01
+NET-1.55            520.5MB     -  32 SSD     spare       Pool0     c1-01
+NET-1.56            520.5MB     -  18 SSD     aggregate   c1n1_ssd  c1-01
+56 entries were displayed.
+
+c1::*>
