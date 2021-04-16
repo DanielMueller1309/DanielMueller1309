@@ -1,0 +1,953 @@
+login as: admin
+Keyboard-interactive authentication prompts from server:
+| Password:
+End of keyboard-interactive prompts from server
+#
+Last login time: 4/13/2021 15:44:54
+c1::> network interface sch
+
+Error: "sch" is not a recognized command
+c1::> network interface show
+            Logical    Status     Network            Current       Current Is
+Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
+----------- ---------- ---------- ------------------ ------------- ------- ----
+c1
+            c1-01_mgmt1  up/up    192.168.4.11/24    c1-01         e0c     true
+            cluster_mgmt up/up    192.168.4.10/24    c1-01         e0c     true
+2 entries were displayed.
+
+c1::> network interface service
+    service        service-policy
+c1::> network interface show
+            Logical    Status     Network            Current       Current Is
+Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
+----------- ---------- ---------- ------------------ ------------- ------- ----
+c1
+            c1-01_mgmt1  up/up    192.168.4.11/24    c1-01         e0c     true
+            cluster_mgmt up/up    192.168.4.10/24    c1-01         e0c     true
+2 entries were displayed.
+
+c1::> network interface show
+            Logical    Status     Network            Current       Current Is
+Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
+----------- ---------- ---------- ------------------ ------------- ------- ----
+c1
+            c1-01_mgmt1  up/up    192.168.4.11/24    c1-01         e0c     true
+            cluster_mgmt up/up    192.168.4.10/24    c1-01         e0c     true
+2 entries were displayed.
+
+c1::> network interface create -vserver c
+    Cluster c1      c1-01
+c1::> network interface create -vserver c1
+    c1    c1-01
+c1::> network interface create -vserver c1-01 -lif
+  <lif-name>                  Logical Interface Name
+c1::> network interface create -vserver c1-01 -lif
+  <lif-name>                  Logical Interface Name
+
+c1::> network interface create -vserver c1-01 -lif clus1 -address
+  <IP Address>                Network Address
+c1::> network interface create -vserver c1-01 -lif clus1 -address  169.254.1.1 -netm                                                                                                                                                         ask
+  <IP Address>                Netmask
+c1::> network interface create -vserver c1-01 -lif clus1 -address  169.254.1.1 -netm                                                                                                                                                         ask
+  <IP Address>                Netmask
+
+c1::> network interface create -vserver c1-01 -lif clus1 -address  169.254.1.1 -netm                                                                                                                                                         ask 255.255.0.0 -home-node c1-01 -home-port e0a -status-admin up -failover-policy sy                                                                                                                                                         stem-defined -firewall-policy "" -failover-group Default-1 -
+    -service-policy           -data-protocol
+    -auto-revert              -dns-zone
+    -listen-for-dns-query     -comment
+    -force-subnet-association -is-dns-update-enabled
+    -broadcast-domain
+c1::> network interface create -vserver c1-01 -lif clus1 -address  169.254.1.1 -netm                                                                                                                                                         ask 255.255.0.0 -home-node c1-01 -home-port e0a -status-admin up -failover-policy sy                                                                                                                                                         stem-defined -firewall-policy "" -failover-group Default-1 -
+    -service-policy           -data-protocol
+    -auto-revert              -dns-zone
+    -listen-for-dns-query     -comment
+    -force-subnet-association -is-dns-update-enabled
+    -broadcast-domain
+
+c1::> network interface create -vserver c1 -lif clus1 -address  169.254.1.1 -netmask                                                                                                                                                          255.255.0.0 -home-node c1-01 -home-port e0a -status-admin up -failover-policy syste                                                                                                                                                         m-defined -firewall-policy "" -failover-group Default-1 -
+Error: Ambiguous argument.  Possible matches include:
+    Keys:
+       -lif
+       -vserver
+    Fields:
+       -address
+       -auto
+       -auto-revert
+       -broadcast-domain
+       -comment
+       -data-protocol
+       -dns-zone
+       -failover-group
+       -failover-policy
+       -firewall-policy
+       -force-subnet-association
+       -home-node
+       -home-port
+       -is-dns-update-enabled
+       -is-vip
+       -listen-for-dns-query
+       -netmask
+       -netmask-length
+       -probe-port
+       -role
+       -service-policy
+       -status-admin
+       -subnet-name
+
+c1::> vserver schow
+
+Error: "schow" is not a recognized command
+
+c1::> vserver show
+                               Admin      Operational Root
+Vserver     Type    Subtype    State      State       Volume     Aggregate
+----------- ------- ---------- ---------- ----------- ---------- ----------
+c1          admin   -          -          -           -          -
+c1-01       node    -          -          -           -          -
+2 entries were displayed.
+
+c1::> set diag
+
+Warning: These diagnostic commands are for use by NetApp personnel only.
+Do you want to continue? {y|n}: y
+
+c1::*> vserver show
+                               Admin      Operational Root
+Vserver     Type    Subtype    State      State       Volume     Aggregate
+----------- ------- ---------- ---------- ----------- ---------- ----------
+Cluster     system  -          -          -           -          -
+c1          admin   -          -          -           -          -
+c1-01       node    -          -          -           -          -
+3 entries were displayed.
+
+c1::*> netwoe
+
+Error: "netwoe" is not a recognized command
+c1::*> network interface create -vserver c
+    Cluster c1      c1-01
+c1::*> network interface create -vserver Cluster -lif
+  <lif-name>                  Logical Interface Name
+c1::*> network interface create -vserver Cluster -ro
+
+Error: invalid argument "-ro"
+c1::*> network interface create -vserver Cluster -role cluster -lif
+  <lif-name>                  Logical Interface Name
+c1::*> network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address
+  <IP Address>                Network Address
+c1::*> network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address 169.254.1.1 -netmask
+  <IP Address>                Netmask
+c1::*> network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address 169.254.1.1 -netmask 255.255.0.0 -home-node c1-01 -status-admin up -home-port e0a -failover-                              policy local-only -firewall-policy "" -auto-revert true -allow-lb-migrate false -failover-group Default-1 -is-dns-update-enabled false -
+    -dns-zone                 -listen-for-dns-query
+    -lb-weight                -comment
+    -force-subnet-association -broadcast-domain
+c1::*> network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address 169.254.1.1 -netmask 255.255.0.0 -home-node c1-01 -status-admin up -home-port e0a -failover-                              policy local-only -firewall-policy "" -auto-revert true -allow-lb-migrate false -failover-group Default-1 -is-dns-update-enabled false
+
+Error: command failed: The specified port, node c1-01 port e0a, is not in the same IPspace as vserver Cluster.
+
+c1::*> network interface show
+            Logical    Status     Network            Current       Current Is
+Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
+----------- ---------- ---------- ------------------ ------------- ------- ----
+c1
+            c1-01_mgmt1  up/up    192.168.4.11/24    c1-01         e0c     true
+            cluster_mgmt up/up    192.168.4.10/24    c1-01         e0c     true
+2 entries were displayed.
+
+c1::*> network interface show -f
+    -failover        -failover-policy -firewall-policy -failover-group
+    -fields
+
+c1::*> network interface show -fields ,ipsa
+
+Error: invalid argument "-fields ,ipsa"
+c1::*> network interface show -fields ,ipsp
+
+Error: invalid argument "-fields ,ipsp"
+c1::*> network interface show -fields ipspace
+vserver lif         ipspace
+------- ----------- -------
+c1      c1-01_mgmt1 Default
+c1      cluster_mgmt
+                    Default
+2 entries were displayed.
+
+c1::*> network port show
+
+Node: c1-01
+                                                                       Ignore
+                                                  Speed(Mbps) Health   Health
+Port      IPspace      Broadcast Domain Link MTU  Admin/Oper  Status   Status
+--------- ------------ ---------------- ---- ---- ----------- -------- ------
+e0a       Default      Default-1        up   1500  auto/1000  healthy  false
+e0b       Default      Default-1        up   1500  auto/1000  healthy  false
+e0c       Default      Default          up   1500  auto/1000  healthy  false
+e0d       Default      Default          up   1500  auto/1000  healthy  false
+4 entries were displayed.
+
+c1::*> vserver show -vserver cl
+
+Error: the value "cl" is invalid for type <vserver name>
+c1::*> vserver show -vserver Cluster
+
+                                    Vserver: Cluster
+                               Vserver Type: system
+                            Vserver Subtype: -
+                               Vserver UUID: cfb9e53a-9c4d-11eb-a2f8-000c29c213f7
+                                Root Volume: -
+                                  Aggregate: -
+                                 NIS Domain: -
+                 Root Volume Security Style: -
+                                LDAP Client: -
+               Default Volume Language Code: -
+                            Snapshot Policy: none
+                              Data Services: -
+                                    Comment:
+                               Quota Policy: -
+                List of Aggregates Assigned: -
+ Limit on Maximum Number of Volumes allowed: -
+                        Vserver Admin State: -
+                  Vserver Operational State: -
+   Vserver Operational State Stopped Reason: -
+                          Allowed Protocols: -
+                       Disallowed Protocols: -
+            Is Vserver with Infinite Volume: false
+                           QoS Policy Group: -
+                        Caching Policy Name: -
+                                Config Lock: -
+             Volume Delete Retention Period: -
+                               IPspace Name: Cluster
+                         Foreground Process: -
+                   Is Msid Preserved for DR: false
+Force start required to start Destination in muliple IDP fan-out case: false
+                    Logical Space Reporting: false
+                  Logical Space Enforcement: false
+
+c1::*> network port modify -node c1-01 -port e0
+    e0a e0b e0c e0d
+c1::*> network port modify -node c1-01 -port e0a -
+    -mtu                  -autonegotiate-admin  -duplex-admin
+    -speed-admin          -flowcontrol-admin    -up-admin
+    -autorevert-delay     -ipspace              -ignore-health-status
+
+c1::*> network port modify -node c1-01 -port e0a -mtu 9000 -i
+    -ipspace              -ignore-health-status
+
+c1::*> network port modify -node c1-01 -port e0a -mtu 9000 -ipspace Cluster
+
+Warning: This command will cause a several second interruption of service on this network port.
+Do you want to continue? {y|n}: y
+
+Error: command failed: Failed to modify the MTU for port "e0a"; it must match the MTU of its broadcast domain. Use the "network port broadcast-domain modify -ipspace Default -broadcast-domain Default-1 -mtu
+       9000" command to modify the MTU of all ports in the broadcast domain to 9000.
+
+c1::*> ip netwo
+
+Error: "netwo" is not a recognized command
+c1::*> network port broadcast-domain shwo
+
+Error: "shwo" is not a recognized command
+
+c1::*> network port broadcast-domain show
+IPspace Broadcast                                         Update
+Name    Domain Name    MTU  Port List                     Status Details
+------- ----------- ------  ----------------------------- --------------
+Cluster Cluster       9000
+                            -                             -
+Default Default       1500
+                            c1-01:e0c                     complete
+                            c1-01:e0d                     complete
+        Default-1     1500
+                            c1-01:e0a                     complete
+                            c1-01:e0b                     complete
+3 entries were displayed.
+
+c1::*> network port broadcast-domain remove-ports -broadcast-domain Default
+    Default   Default-1
+c1::*> network port broadcast-domain remove-ports -broadcast-domain Default-1 -ports c1-01:e0
+    c1-01:e0a c1-01:e0b
+c1::*> network port broadcast-domain remove-ports -broadcast-domain Default-1 -ports c1-01:e0a
+
+c1::*> network port broadcast-domain remove-ports -broadcast-domain Default-1 -ports c1-01:e0b
+
+c1::*> network port broadcast-domain show
+IPspace Broadcast                                         Update
+Name    Domain Name    MTU  Port List                     Status Details
+------- ----------- ------  ----------------------------- --------------
+Cluster Cluster       9000
+                            -                             -
+Default Default       1500
+                            c1-01:e0c                     complete
+                            c1-01:e0d                     complete
+        Default-1     1500
+                            -                             -
+3 entries were displayed.
+
+c1::*> network port broadcast-domain delete -broadcast-domain Default
+    Default   Default-1
+c1::*> network port broadcast-domain delete -broadcast-domain Default-1
+
+c1::*> network port broadcast-domain show
+IPspace Broadcast                                         Update
+Name    Domain Name    MTU  Port List                     Status Details
+------- ----------- ------  ----------------------------- --------------
+Cluster Cluster       9000
+                            -                             -
+Default Default       1500
+                            c1-01:e0c                     complete
+                            c1-01:e0d                     complete
+2 entries were displayed.
+
+c1::*> network port broadcast-domain
+    add-ports    create       delete       merge        modify
+    move         reachability remove-ports rename       show
+    split
+
+c1::*> network port broadcast-domain add -broadcast-domain Cl
+
+Error: the value "Cl" is invalid for type <broadcast domain name>
+c1::*> network port broadcast-domain add -broadcast-domain Cl
+
+Error: the value "Cl" is invalid for type <broadcast domain name>
+c1::*> network port broadcast-domain add -broadcast-domain Cluster -ports c1-01:e0
+    c1-01:e0a c1-01:e0b
+c1::*> network port broadcast-domain add -broadcast-domain Cluster -ports c1-01:e0a
+
+Error: command failed: Broadcast domain "Cluster" in IPspace "Default" not found.
+
+c1::*> network port broadcast-domain add -
+    -ipspace          -broadcast-domain -ports
+
+c1::*> network port broadcast-domain add-ports -
+    -ipspace          -broadcast-domain -ports
+
+c1::*> network port broadcast-domain add-ports -broadcast-domain Cl
+
+Error: the value "Cl" is invalid for type <broadcast domain name>
+c1::*> network port broadcast-domain add-ports -broadcast-domain C
+
+Error: the value "C" is invalid for type <broadcast domain name>
+c1::*> network port broadcast-domain add-ports -broadcast-domain C
+
+Error: the value "C" is invalid for type <broadcast domain name>
+c1::*> network port broadcast-domain show
+IPspace Broadcast                                         Update
+Name    Domain Name    MTU  Port List                     Status Details
+------- ----------- ------  ----------------------------- --------------
+Cluster Cluster       9000
+                            -                             -
+Default Default       1500
+                            c1-01:e0c                     complete
+                            c1-01:e0d                     complete
+2 entries were displayed.
+
+c1::*> network interface c
+    capacity cdb      check    create
+
+c1::*> network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address 169.254.1.1 -netmask 255.255.0.0 -home-node c1-01 -status-admin up -home-port e0a -                                           -failover-policy          -firewall-policy
+    -auto-revert              -dns-zone
+    -listen-for-dns-query     -allow-lb-migrate
+    -lb-weight                -failover-group
+    -comment                  -force-subnet-association
+    -is-dns-update-enabled    -broadcast-domain
+
+c1::*> network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address 169.254.1.1 -netmask 255.255.0.0 -home-node c1-01 -status-admin up -home-port e0a -broadcast                              -domain
+  <text>                      Broadcast Domain
+
+c1::*> network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address 169.254.1.1 -netmask 255.255.0.0 -home-node c1-01 -status-admin up -home-port e0a -broadcast                              -domain
+  <text>                      Broadcast Domain
+
+c1::*> network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address 169.254.1.1 -netmask 255.255.0.0 -home-node c1-01 -status-admin up -home-port e0a -broadcast                              -domain Cluster
+
+Error: command failed: The Vserver "Cluster", Broadcast-Domain "Cluster", Home-Node "c1-01" and Home-Port "e0a" combination is not valid.
+
+c1::*> network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address 169.254.1.1 -netmask 255.255.0.0 -home-node c1-01 -status-admin up -home-port e0a
+Error: command failed: The specified port, node c1-01 port e0a, is not in the same IPspace as vserver Cluster.
+
+c1::*> vserver show -vserver Cluster
+
+                                    Vserver: Cluster
+                               Vserver Type: system
+                            Vserver Subtype: -
+                               Vserver UUID: cfb9e53a-9c4d-11eb-a2f8-000c29c213f7
+                                Root Volume: -
+                                  Aggregate: -
+                                 NIS Domain: -
+                 Root Volume Security Style: -
+                                LDAP Client: -
+               Default Volume Language Code: -
+                            Snapshot Policy: none
+                              Data Services: -
+                                    Comment:
+                               Quota Policy: -
+                List of Aggregates Assigned: -
+ Limit on Maximum Number of Volumes allowed: -
+                        Vserver Admin State: -
+                  Vserver Operational State: -
+   Vserver Operational State Stopped Reason: -
+                          Allowed Protocols: -
+                       Disallowed Protocols: -
+            Is Vserver with Infinite Volume: false
+                           QoS Policy Group: -
+                        Caching Policy Name: -
+                                Config Lock: -
+             Volume Delete Retention Period: -
+                               IPspace Name: Cluster
+                         Foreground Process: -
+                   Is Msid Preserved for DR: false
+Force start required to start Destination in muliple IDP fan-out case: false
+                    Logical Space Reporting: false
+                  Logical Space Enforcement: false
+
+c1::*> vserver show -vserver c
+    Cluster c1      c1-01
+c1::*> vserver show -vserver c1
+    c1    c1-01
+
+c1::*> vserver show -vserver c1-01
+
+                                    Vserver: c1-01
+                               Vserver Type: node
+                            Vserver Subtype: -
+                               Vserver UUID: 63b74f73-9c4d-11eb-a2f8-000c29c213f7
+                                Root Volume: -
+                                  Aggregate: -
+                                 NIS Domain: -
+                 Root Volume Security Style: -
+                                LDAP Client: -
+               Default Volume Language Code: C
+                            Snapshot Policy: -
+                              Data Services: -
+                                    Comment:
+                               Quota Policy: -
+                List of Aggregates Assigned: -
+ Limit on Maximum Number of Volumes allowed: -
+                        Vserver Admin State: -
+                  Vserver Operational State: -
+   Vserver Operational State Stopped Reason: -
+                          Allowed Protocols: -
+                       Disallowed Protocols: -
+            Is Vserver with Infinite Volume: false
+                           QoS Policy Group: -
+                        Caching Policy Name: -
+                                Config Lock: -
+             Volume Delete Retention Period: -
+                               IPspace Name: -
+                         Foreground Process: -
+                   Is Msid Preserved for DR: false
+Force start required to start Destination in muliple IDP fan-out case: false
+                    Logical Space Reporting: false
+                  Logical Space Enforcement: false
+
+c1::*> vserver show -instance -vserver c
+    Cluster c1      c1-01
+c1::*> vserver show -instance -vserver c1
+
+                                    Vserver: c1
+                               Vserver Type: admin
+                            Vserver Subtype: -
+                               Vserver UUID: cfe92ad7-9c4d-11eb-a2f8-000c29c213f7
+                                Root Volume: -
+                                  Aggregate: -
+                                 NIS Domain: -
+                 Root Volume Security Style: -
+                                LDAP Client: -
+               Default Volume Language Code: en_US
+                            Snapshot Policy: none
+                              Data Services: -
+                                    Comment: The administrative vserver.
+                               Quota Policy: -
+                List of Aggregates Assigned: -
+ Limit on Maximum Number of Volumes allowed: -
+                        Vserver Admin State: -
+                  Vserver Operational State: -
+   Vserver Operational State Stopped Reason: -
+                          Allowed Protocols: -
+                       Disallowed Protocols: -
+            Is Vserver with Infinite Volume: false
+                           QoS Policy Group: -
+                        Caching Policy Name: -
+                                Config Lock: false
+             Volume Delete Retention Period: -
+                               IPspace Name: Default
+                         Foreground Process: -
+                   Is Msid Preserved for DR: false
+Force start required to start Destination in muliple IDP fan-out case: false
+                    Logical Space Reporting: false
+                  Logical Space Enforcement: false
+
+c1::*> vserver show -
+    -instance                         -protocols
+    -vserver                          -type
+    -subtype                          -uuid
+    -rootvolume                       -aggregate
+    -nisdomain                        -rootvolume-security-style
+    -ldap-client                      -language
+    -snapshot-policy                  -data-services
+    -comment                          -quota-policy
+    -aggr-list                        -max-volumes
+    -admin-state                      -operational-state
+    -operational-state-stopped-reason -allowed-protocols
+    -disallowed-protocols             -is-repository
+    -qos-policy-group                 -caching-policy
+    -config-lock                      -volume-delete-retention-hours
+    -ipspace                          -foreground
+    -is-msid-preserve                 -force-start-req-idp
+    -is-space-reporting-logical       -is-space-enforcement-logical
+    -fields
+
+c1::*> history                                                                                                                                                                                                                                   1  network interface show
+    2  network interface create -vserver c1 -lif clus1 -address  169.254.1.1 -netmask 255.255.0.0 -home-node c1-01 -home-port e0a -status-admin up -failover-policy system-defined -firewall-policy "" -failove                              r-group Default-1 -
+    3  vserver schow
+    4  vserver show
+    5  set diag
+    6  vserver show
+    7  network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address 169.254.1.1 -netmask 255.255.0.0 -home-node c1-01 -status-admin up -home-port e0a -failover-                              policy local-only -firewall-policy "" -auto-revert true -allow-lb-migrate false -failover-group Default-1 -is-dns-update-enabled false
+    8  network interface show
+    9  network interface show -fields ipspace
+   10  network port show
+   11  vserver show -vserver Cluster
+   12  network port modify -node c1-01 -port e0a -mtu 9000 -ipspace Cluster
+   13  network port broadcast-domain shwo
+   14  network port broadcast-domain show
+   15  network port broadcast-domain remove-ports -broadcast-domain Default-1 -ports c1-01:e0a
+   16  network port broadcast-domain remove-ports -broadcast-domain Default-1 -ports c1-01:e0b
+   17  network port broadcast-domain show
+   18  network port broadcast-domain delete -broadcast-domain Default-1
+   19  network port broadcast-domain show
+   20  network port broadcast-domain add -broadcast-domain Cluster -ports c1-01:e0a
+   21  network port broadcast-domain show
+   22  network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address 169.254.1.1 -netmask 255.255.0.0 -home-node c1-01 -status-admin up -home-port e0a -broadcast                              -domain Cluster
+   23  network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address 169.254.1.1 -netmask 255.255.0.0 -home-node c1-01 -status-admin up -home-port e0a
+   24  vserver show -vserver Cluster
+   25  vserver show -vserver c1-01
+   26  vserver show -instance -vserver c1
+
+c1::*> network port broadcast-domain -add
+Error: "-add" is not a recognized command
+c1::*> network port broadcast-domain -add-po
+
+Error: "-add-po" is not a recognized command
+c1::*> network port broadcast-domain -addp
+
+Error: "-addp" is not a recognized command
+c1::*> network port broadcast-domain add-ports -broadcast-domain C
+
+Error: the value "C" is invalid for type <broadcast domain name>
+c1::*> network port broadcast-domain add-ports -broadcast-domain Cl
+
+Error: the value "Cl" is invalid for type <broadcast domain name>
+c1::*> network port broadcast-domain add-ports -broadcast-domain Cl
+
+Error: the value "Cl" is invalid for type <broadcast domain name>
+c1::*> sudo network port broadcast-domain add-ports -broadcast-domain Cl
+
+Error: "sudo" is not a recognized command
+c1::*> network port broadcast-domain add-ports -broadcast-domain Cl
+
+Error: the value "Cl" is invalid for type <broadcast domain name>
+c1::*> network port modify -port e0a -node c1-01 -
+    -mtu                  -autonegotiate-admin  -duplex-admin
+    -speed-admin          -flowcontrol-admin    -up-admin
+    -autorevert-delay     -ipspace              -ignore-health-status
+c1::*> network port modify -port e0a -node c1-01 -ipspace
+    Cluster Default
+
+c1::*> network port modify -port e0a -node c1-01 -ipspace Cluster
+
+Error: command failed: Cannot directly modify the IPspace on this port; instead add it to the appropriate broadcast domain in the desired IPspace.
+
+c1::*> network port ad
+
+Error: "ad" is not a recognized command
+c1::*> network port
+    broadcast-domain         cdb                      cna
+    dcb                      delete                   ifgrp
+    modify                   reachability             show
+    show-address-filter-info vip                      vlan
+
+c1::*> network port broadcast-domain
+    add-ports    create       delete       merge        modify
+    move         reachability remove-ports rename       show
+    split
+
+c1::*> network port broadcast-domain add-ports -broadcast-domain Default -ports c1-01:e0
+    c1-01:e0a c1-01:e0b
+c1::*> network port broadcast-domain add-ports -broadcast-domain Default -ports c1-01:e0
+    c1-01:e0a c1-01:e0b
+
+c1::*> network port broadcast-domain add-ports -broadcast-domain Default -ports c1-01:e0
+    c1-01:e0a c1-01:e0b
+
+c1::*> network port broadcast-domain add-ports -broadcast-domain Default -ports c1-01:e0a -ipspace C
+
+Error: the value "C" is invalid for type <IPspace>
+c1::*> network port broadcast-domain add-ports -broadcast-domain Default -ports c1-01:e0a -ipspace Default
+
+c1::*> network port show
+
+Node: c1-01
+                                                                       Ignore
+                                                  Speed(Mbps) Health   Health
+Port      IPspace      Broadcast Domain Link MTU  Admin/Oper  Status   Status
+--------- ------------ ---------------- ---- ---- ----------- -------- ------
+e0a       Default      Default          up   1500  auto/1000  healthy  false
+e0b       Default      -                up   1500  auto/1000  healthy  false
+e0c       Default      Default          up   1500  auto/1000  healthy  false
+e0d       Default      Default          up   1500  auto/1000  healthy  false
+4 entries were displayed.
+
+c1::*> network port modify -port e0a -node c1-01 -ipspace Cluster
+
+Error: command failed: Cannot directly modify the IPspace on this port; instead add it to the appropriate broadcast domain in the desired IPspace.
+
+c1::*> network port delete -node c1-01 -port e0
+    e0a e0b e0c e0d
+c1::*> network port delete -node c1-01 -port e0a
+
+Error: command failed: Cannot delete a currently installed physical port.
+
+c1::*> network port broadcast-domain
+    add-ports    create       delete       merge        modify
+    move         reachability remove-ports rename       show
+    split
+
+c1::*> network port broadcast-domain mo
+    modify move
+
+c1::*> network port broadcast-domain move -broadcast-domain Default -to-ipspace
+    Cluster Default
+c1::*> network port broadcast-domain move -broadcast-domain Default -to-ipspace
+    Cluster Default
+
+c1::*> network port broadcast-domain move -broadcast-domain Default -to-ipspace Cluster
+
+Error: command failed: Moving the system-generated broadcast domain of the "Default" IPspace is not supported.
+
+c1::*> network port broadcast-domain move -
+    -ipspace          -broadcast-domain -to-ipspace
+
+c1::*> network port broadcast-domain move -ipspace
+    Cluster Default
+
+c1::*> network port broadcast-domain move -ipspace Default  -broadcast-domain Cluster -to-ipspace
+    Cluster Default
+c1::*> network port broadcast-domain move -ipspace Default  -broadcast-domain Default  -to-ipspace
+    Cluster Default
+
+c1::*> network port broadcast-domain move -ipspace Default  -broadcast-domain Default  -to-ipspace Cluster
+
+Error: command failed: Moving the system-generated broadcast domain of the "Default" IPspace is not supported.
+
+c1::*> setup
+Error: Ambiguous command.  Possible matches include:
+       cluster setup
+       security key-manager setup
+       system switch ethernet log setup-password
+
+c1::*> cluster
+
+c1::cluster*> setup
+
+Enter the node management interface port [e0c]:
+Enter the node management interface IP address [192.168.4.11]:
+Enter the node management interface netmask [255.255.255.0]:
+Enter the node management interface default gateway [192.168.4.1]:
+
+
+Step 2 of 5: Add Feature License Keys
+You can type "back", "exit", or "help" at any question.
+
+Enter an additional license key []:
+
+
+Step 3 of 5: Set Up a Vserver for Cluster Administration
+You can type "back", "exit", or "help" at any question.
+
+
+Enter the cluster management interface port [e0c]: e0a
+Enter the cluster management interface IP address [192.168.4.10]:
+Exiting the cluster setup wizard. Any changes you made have been saved.
+
+
+Warning: You have exited the cluster setup wizard before completing all
+of the tasks. The cluster is not configured. You can complete cluster setup by typing
+"cluster setup" in the command line interface.
+
+
+c1::cluster*> setup
+
+Enter the node management interface port [e0c]:
+Enter the node management interface IP address [192.168.4.11]:
+Enter the node management interface netmask [255.255.255.0]:
+Enter the node management interface default gateway [192.168.4.1]:
+
+
+Step 2 of 5: Add Feature License Keys
+You can type "back", "exit", or "help" at any question.
+
+Enter an additional license key []:
+
+
+Step 3 of 5: Set Up a Vserver for Cluster Administration
+You can type "back", "exit", or "help" at any question.
+
+
+Enter the cluster management interface port [e0c]:
+Enter the cluster management interface IP address [192.168.4.10]:
+Enter the cluster management interface netmask [255.255.255.0]:
+Enter the cluster management interface default gateway [192.168.4.1]:
+Enter the DNS domain names [c1.dannetapp.local]:
+Enter the name server IP addresses:
+Enter the name server IP addresses:
+Enter the name server IP addresses: 192.168.4.1
+DNS lookup for the admin Vserver will use the c1.dannetapp.local domain.
+
+Step 4 of 5: Configure Storage Failover (SFO)
+You can type "back", "exit", or "help" at any question.
+
+
+SFO will not be enabled on a non-HA system.
+
+
+Step 5 of 5: Set Up the Node
+You can type "back", "exit", or "help" at any question.
+
+Where is the controller located []:
+Enter the system config backup destination address (or press enter to skip this step):
+
+You have not configured a backup destination for the system configuration.
+For further assistance in configuring a destination, contact technical support.
+
+
+To complete cluster setup, you must join each additional node to the cluster
+by running "system node show-discovered" and "cluster add-node" from a node in the cluster.
+
+Configure backups for the cluster's configuration using the
+"system configuration backup" command set at advanced privilege.
+
+To complete system configuration, you can use either OnCommand System Manager
+or the Data ONTAP command-line interface.
+
+To access OnCommand System Manager, point your web browser to the cluster
+management IP address (https://192.168.4.10).
+
+To access the command-line interface, connect to the cluster management
+IP address (for example, ssh admin@192.168.4.10).
+
+
+
+c1::cluster*> top
+
+c1::*> cluster identity show
+
+          Cluster UUID: c6521e33-9c4d-11eb-a2f8-000c29c213f7
+          Cluster Name: c1
+ Cluster Serial Number: 1-80-000011
+      Cluster Location:
+       Cluster Contact:
+              RDB UUID: c652fd55-9c4d-11eb-a2f8-000c29c213f7
+
+c1::*> cluster identity show -inst
+
+Error: invalid argument "-inst"
+c1::*> cluster identity show -inst
+
+Error: invalid argument "-inst"
+c1::*> cluster identity show -inst
+
+Error: invalid argument "-inst"
+c1::*> cluster identity modify -name c1 -location "" -contact "" -
+
+Error: invalid argument "-"
+c1::*> network port add
+
+Error: "add" is not a recognized command
+c1::*> network port
+    broadcast-domain         cdb                      cna
+    dcb                      delete                   ifgrp
+    modify                   reachability             show
+    show-address-filter-info vip                      vlan
+
+c1::*> cluster
+    add-node               add-node-status        application-record
+    contact-info           controller-replacement create
+    date                   ha                     identity
+    image                  join                   kernel-service
+    log-forwarding         manifest-target        modify
+    peer                   ping-cluster           quorum-service
+    remove-node            ring                   setup
+    show                   statistics             time-service
+
+c1::*> cluster add-node
+    add-node        add-node-status
+c1::*> cluster add-node
+    add-node        add-node-status
+
+c1::*> cluster add-node-status -node-uuid
+  <UUID>                      Node UUID
+c1::*> cluster add-node-status
+
+
+Node Name        Cluster IP          Status              Error Reason
+---------------- ------------------- ------------------- --------------------------
+c1-01            -                   success
+
+c1::*> network port broadcast-domai^
+
+Error: "broadcast-domai^" is not a recognized command
+c1::*> network port broadcast-domain
+    add-ports    create       delete       merge        modify
+    move         reachability remove-ports rename       show
+    split
+
+c1::*> network port broadcast-domain add-ports -
+    -ipspace          -broadcast-domain -ports
+
+c1::*> network port broadcast-domain add-ports -ipspace
+    Cluster Default
+
+c1::*> network port broadcast-domain add-ports -ipspace Cluster -broadcast-domain Cluster -ports c1-01:e0a
+
+Error: command failed: Port "c1-01:e0a" is already assigned to broadcast domain "Default" in IPspace "Default".
+
+c1::*> network port broadcast-domain re
+    reachability remove-ports rename
+
+c1::*> network port broadcast-domain remove-ports -broadcast-domain Default -ports c1-01:e0
+    c1-01:e0a c1-01:e0c c1-01:e0d
+c1::*> network port broadcast-domain remove-ports -broadcast-domain Default -ports c1-01:e0a
+
+c1::*> network port broadcast-domain add-ports -ipspace Cluster -broadcast-domain Cluster -ports c1-01:e0a
+
+c1::*> history
+    1  network interface show
+    2  network interface create -vserver c1 -lif clus1 -address  169.254.1.1 -netmask 255.255.0.0 -home-node c1-01 -home-port e0a -status-admin up -failover-policy system-defined -firewall-policy "" -failove                              r-group Default-1 -
+    3  vserver schow
+    4  vserver show
+    5  set diag
+    6  vserver show
+    7  network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address 169.254.1.1 -netmask 255.255.0.0 -home-node c1-01 -status-admin up -home-port e0a -failover-                              policy local-only -firewall-policy "" -auto-revert true -allow-lb-migrate false -failover-group Default-1 -is-dns-update-enabled false
+    8  network interface show
+    9  network interface show -fields ipspace
+   10  network port show
+   11  vserver show -vserver Cluster
+   12  network port modify -node c1-01 -port e0a -mtu 9000 -ipspace Cluster
+   13  network port broadcast-domain shwo
+   14  network port broadcast-domain show
+   15  network port broadcast-domain remove-ports -broadcast-domain Default-1 -ports c1-01:e0a
+   16  network port broadcast-domain remove-ports -broadcast-domain Default-1 -ports c1-01:e0b
+   17  network port broadcast-domain show
+   18  network port broadcast-domain delete -broadcast-domain Default-1
+   19  network port broadcast-domain show
+   20  network port broadcast-domain add -broadcast-domain Cluster -ports c1-01:e0a
+   21  network port broadcast-domain show
+   22  network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address 169.254.1.1 -netmask 255.255.0.0 -home-node c1-01 -status-admin up -home-port e0a -broadcast                              -domain Cluster
+   23  network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address 169.254.1.1 -netmask 255.255.0.0 -home-node c1-01 -status-admin up -home-port e0a
+   24  vserver show -vserver Cluster
+   25  vserver show -vserver c1-01
+   26  vserver show -instance -vserver c1
+   27  history
+   28  network port modify -port e0a -node c1-01 -ipspace Cluster
+   29  network port broadcast-domain add-ports -broadcast-domain Default -ports c1-01:e0a -ipspace Default
+   30  network port show
+   31  network port modify -port e0a -node c1-01 -ipspace Cluster
+   32  network port delete -node c1-01 -port e0a
+   33  network port broadcast-domain move -broadcast-domain Default -to-ipspace Cluster
+   34  network port broadcast-domain move -ipspace Default  -broadcast-domain Default  -to-ipspace Cluster
+   35  setup
+   36  cluster
+   37  setup
+   38  top
+   39  cluster identity show
+   40  cluster add-node-status
+   41  network port broadcast-domain add-ports -ipspace Cluster -broadcast-domain Cluster -ports c1-01:e0a
+   42  network port broadcast-domain remove-ports -broadcast-domain Default -ports c1-01:e0a
+   43  network port broadcast-domain add-ports -ipspace Cluster -broadcast-domain Cluster -ports c1-01:e0a
+
+c1::*> network port broadcast-domain add-ports -
+    -ipspace          -broadcast-domain -ports
+
+c1::*> network port broadcast-domain add-ports -ipspace
+    Cluster Default
+
+c1::*> network port broadcast-domain add-ports -broadcast-domain Default -ipspace C
+
+Error: the value "C" is invalid for type <IPspace>
+c1::*> network port broadcast-domain add-ports -ipspace Cluster -broadcast-domain Cluster -ports c1-01:e0b
+
+c1::*> network port broadcast-domain show
+IPspace Broadcast                                         Update
+Name    Domain Name    MTU  Port List                     Status Details
+------- ----------- ------  ----------------------------- --------------
+Cluster Cluster       9000
+                            c1-01:e0a                     complete
+                            c1-01:e0b                     complete
+Default Default       1500
+                            c1-01:e0c                     complete
+                            c1-01:e0d                     complete
+2 entries were displayed.
+
+c1::*> !22
+
+c1::*> network interface show
+            Logical    Status     Network            Current       Current Is
+Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
+----------- ---------- ---------- ------------------ ------------- ------- ----
+Cluster
+            c1-01_clus1  up/up    169.254.1.1/16     c1-01         e0a     true
+c1
+            c1-01_mgmt1  up/up    192.168.4.11/24    c1-01         e0c     true
+            cluster_mgmt up/up    192.168.4.10/24    c1-01         e0c     true
+3 entries were displayed.
+
+c1::*> network interface create -vserver Cluster -role cluster -lif clus1 -service-policy default-cluster -address 169.254.1.2 -netmask 255.255.0.0 -home-node c1-01 -status-admin up -home-port e0b -broadcast                              -domain Cluster
+
+Error: command failed: A LIF with the same name already exists
+
+c1::*> network interface create -vserver Cluster -role cluster -lif clus2 -service-policy default-cluster -address 169.254.1.2 -netmask 255.255.0.0 -home-node c1-01 -status-admin up -home-port e0b -broadcast                              -domain Cluster
+
+c1::*> network interface show                                                                                                                                                                                                                            Logical    Status     Network            Current       Current Is
+Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
+----------- ---------- ---------- ------------------ ------------- ------- ----
+Cluster
+            c1-01_clus1  up/up    169.254.1.1/16     c1-01         e0a     true
+            c1-01_clus2  up/up    169.254.1.2/16     c1-01         e0b     true
+c1
+            c1-01_mgmt1  up/up    192.168.4.11/24    c1-01         e0c     true
+            cluster_mgmt up/up    192.168.4.10/24    c1-01         e0c     true
+4 entries were displayed.
+
+c1::*> ping -lif c
+    c1-01_clus1  c1-01_clus2  c1-01_mgmt1  cluster_mgmt
+c1::*> ping -
+    -node                   -lif                    -vserver
+    -use-source-port        -destination            -show-detail
+    -record-route           -verbose                -packet-size
+    -count                  -wait                   -flood
+    -disallow-fragmentation -wait-response
+
+c1::*> ping -v
+    -vserver -verbose
+
+c1::*> ping -vserver c
+    Cluster c1
+c1::*> ping -vserver Cluster -lif c1-01_clus
+    c1-01_clus1 c1-01_clus2
+c1::*> ping -vserver Cluster -lif c1-01_clus1 -destination
+  <Remote InetAddress>        Destination
+c1::*> ping -vserver Cluster -lif c1-01_clus1 -destination  169.254.2.1
+169.254.2.1 is alive
+
+c1::*> ping -vserver Cluster -lif c1-01_clus1 -destination  169.254.2.2
+no answer from 169.254.2.2
+
+c1::*> node show
+Node      Health Eligibility Uptime        Model       Owner    Location
+--------- ------ ----------- ------------- ----------- -------- ---------------
+c1-01     true   true             01:49:17 SIMBOX
+c1-02     true   true             01:33:35 SIMBOX
+2 entries were displayed.
+
+c1::*>
+c1::*>
